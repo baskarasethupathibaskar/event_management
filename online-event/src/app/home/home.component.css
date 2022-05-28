@@ -1,0 +1,62 @@
+@keyframes slidy {
+    0% {
+          left: 0%;
+      }
+    20% {
+          left: 0%;
+      }
+    25% {
+          left: -100%;
+      }
+    45% {
+          left: -100%;
+      }
+    50% {
+          left: -200%;
+      }
+    70% {
+          left: -200%;
+      }
+    75% {
+          left: -300%;
+      }
+    95% {
+          left: -300%;
+      }
+    100% {
+          left: -400%;
+      }
+  }
+body {
+      margin: 0;
+  }
+div#slider {
+      overflow: hidden;
+  }
+div#slider figure img {
+      float: left;
+      width: 5%;
+      height: fit-content;
+  }
+div#slider figure {
+      animation: 10s slidy infinite;
+      font-size: 0;
+      left: 0;
+      margin: 0;
+      position: relative;
+      text-align: left;
+      width: 615%;
+  }
+.heading span{
+      color:var(--main-color);
+      font-weight: 900;
+      text-transform: uppercase;
+  }
+.shadow {
+      box-shadow: inset 0 0 5px 2px #282a2d;
+  }
+
+  
+.section{
+    padding:10rem 10%;
+}

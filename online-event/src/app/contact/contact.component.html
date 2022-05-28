@@ -1,0 +1,45 @@
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>Event</span> Booking </h1>
+
+    <form [formGroup]="contactForm" (ngSubmit)="saving(this.contactForm.value)">
+        <div class="inputBox">
+            <input type="text" placeholder="name" formControlName="name">
+            <input type="email" placeholder="email" formControlName="email">
+        </div>
+        <div class="inputBox">
+            <input type="number" placeholder="mobile" formControlName="mobile">
+            <input type="number" placeholder="adhar" formControlName="adhar">
+        </div>
+        <textarea name="" placeholder="your address" id="" cols="30" rows="10" formControlName="address"></textarea>
+        <input type="submit" value="Book Your Event" class="btn">
+    </form>
+
+</section>
+<!-- 
+<section>
+    <div class="tab">
+    //<input *ngIf="autoClick" type="submit" value="View Booking Events" class="btn">
+    <table >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Adhar</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of alluserData">
+                <td>{{ user.name }}</td>
+                <td>{{ user.email}}</td>
+                <td>{{ user.mobile }}</td>
+                <td>{{ user.adhar }}</td>
+                <td>{{ user.address }}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </section>
+    -->

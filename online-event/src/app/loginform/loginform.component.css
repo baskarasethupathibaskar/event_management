@@ -1,0 +1,47 @@
+section {
+    padding: 20rem 9%;
+}
+
+.login form{
+    margin:1rem auto;
+    max-width: 70rem;
+    text-align: center;
+}
+
+.login form .inputBox{
+    display:contents;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.login form .inputBox input,
+.login form .inputBox select,
+.login form textarea{
+    background:#333;
+    border-radius: .5rem;
+    color:#fff;
+    font-size: 1.5rem;
+    margin:.7rem 0;
+    padding:1rem;
+    text-transform: none;
+    width: 100%;
+}
+
+.login form .inputBox input::placeholder,
+.login form textarea::placeholder{
+    color:#eee;
+    text-transform: capitalize;
+}
+
+.login form .inputBox input:focus,
+.login form textarea:focus{
+    background:#444;
+}
+
+.login form .inputBox input{
+    width: 49%;
+}
+
+.login form textarea{
+    resize: none;
+}

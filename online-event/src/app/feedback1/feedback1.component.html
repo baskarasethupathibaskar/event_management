@@ -1,0 +1,21 @@
+<section>
+    <div class="tab">
+        <!-- <input *ngIf="autoClick" type="submit" value="View Booking Events" class="btn"> -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Event</th>
+                    <th>Feedback</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of alluserData">
+                    <td>{{ user.name1 }}</td>
+                    <td>{{ user.event}}</td>
+                    <td>{{ user.comment }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

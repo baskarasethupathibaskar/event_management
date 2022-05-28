@@ -1,0 +1,18 @@
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>Feedback</span> Form </h1>
+
+    <form [formGroup]="FeedForm" (ngSubmit)="saving(this.FeedForm.value)">
+        <div class="inputBox">
+            <input type="text" placeholder="name" formControlName="name1">
+            <input type="text" placeholder="event" formControlName="event">
+        </div>
+        <!-- <div class="inputBox">
+            <input type="number" placeholder="mobile" formControlName="mobile">
+            <input type="number" placeholder="adhar" formControlName="adhar">
+        </div> -->
+        <textarea name="" placeholder="your comments" id="" cols="30" rows="10" formControlName="comment"></textarea>
+        <input type="submit" (click)=" saving(this.FeedForm.value)" value="Enter Your Feedback" class="btn">
+    </form>
+
+</section>

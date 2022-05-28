@@ -1,0 +1,27 @@
+<section>
+    <div class="tab">
+    <!-- <input *ngIf="autoClick" type="submit" value="View Booking Events" class="btn"> -->
+    <table >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Adhar</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of alluserData">
+                <td>{{ user.name }}</td>
+                <td>{{ user.email}}</td>
+                <td>{{ user.mobile }}</td>
+                <td>{{ user.adhar }}</td>
+                <td>{{ user.address }}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </section>
+    
+    

@@ -1,0 +1,188 @@
+<section class="contact" id="contact">
+
+
+    <form [formGroup]="paymentForm" (ngSubmit)="saving(this.paymentForm.value)">
+        <h1 class="heading1"> <span>Personal</span>Details</h1>
+        <div class="inputBox">
+            <input type="text" placeholder="name" formControlName="name">
+            <input type="email" placeholder="email" formControlName="email">
+            <input type="date" placeholder="service date" formControlName="date">
+        </div>
+        <div class="inputBox">
+            <label>select your location</label>
+            <select name="bankname" class="inputBox" required formControlName="location">
+                <option selected="selected" value="0">--select your location --</option>
+                <option>Chennai</option>
+                <option>Madurai</option>
+                <option>Coimputhur</option>
+                <option>Trichy</option>
+                <option>Erode</option>
+                <option>Namakal</option>
+                <option>Selam</option>
+            </select>
+        </div>
+
+        <h1 class="heading1"> <span>Event</span>Details</h1>
+        <div class="inputBox">
+            <label>select your Event</label>
+            <select name="bankname" class="inputBox" required formControlName="service">
+                <option selected="selected" value="0">--select your Event --</option>
+                <!-- <option>venue</option> -->
+                <!-- <option>invitation</option> -->
+                <option>entertainment</option>
+                <!-- <option>foods</option> -->
+                <option>Photos and Videos</option>
+                <option>Birthday</option>
+                <option>Weddings</option>
+                <option>Concerts</option>
+            </select>
+            <label>Catagory</label>
+            <select name="category" class="inputBox" required formControlName="category">
+                <option selected="selected" value="0">--select your Catagory --</option>
+                <option>platinum</option>
+                <option>gold</option>
+                <option>silver</option>
+            </select>
+        </div>
+
+        <h1 class="heading1"> <span>Bank</span>Details</h1>
+        <div class="inputBox">
+            <label>Select Your Bank</label>
+            <select name="bankname" class="inputBox" required formControlName="bank" aria-placeholder="select ">
+                <option selected="selected" value="0">--select your bankname --</option>
+                <option>ALLAHABAD BANK </option>
+                <option>ANDHRA BANK</option>
+                <option>AXIS BANK</option>
+                <option>STATE BANK OF INDIA</option>
+                <option>BANK OF BARODA</option>
+                <option>UCO BANK</option>
+                <option>UNION BANK OF INDIA</option>
+                <option>BANK OF INDIA</option>
+                <option>BANDHAN BANK LIMITED</option>
+                <option>CANARA BANK</option>
+                <option>GRAMIN VIKASH BANK</option>
+                <option>CORPORATION BANK</option>
+                <option>INDIAN BANK</option>
+                <option>INDIAN OVERSEAS BANK</option>
+                <option>ORIENTAL BANK OF COMMERCE</option>
+                <option>PUNJAB AND SIND BANK</option>
+                <option>PUNJAB NATIONAL BANK</option>
+                <option>RESERVE BANK OF INDIA</option>
+                <option>SOUTH INDIAN BANK</option>
+                <option>UNITED BANK OF INDIA</option>
+                <option>CENTRAL BANK OF INDIA</option>
+                <option>VIJAYA BANK</option>
+                <option>DENA BANK</option>
+                <option>BHARATIYA MAHILA BANK LIMITED</option>
+                <option>FEDERAL BANK LTD </option>
+                <option>HDFC BANK LTD</option>
+                <option>ICICI BANK LTD</option>
+                <option>IDBI BANK LTD</option>
+                <option>PAYTM BANK</option>
+                <option>FINO PAYMENT BANK</option>
+                <option>INDUSIND BANK LTD</option>
+                <option>KARNATAKA BANK LTD</option>
+                <option>KOTAK MAHINDRA BANK</option>
+                <option>YES BANK LTD</option>
+                <option>SYNDICATE BANK</option>
+                <option>BANK OF INDIA</option>
+                <option>BANK OF MAHARASHTRA</option>
+            </select>
+            <input type="text" placeholder="IFSC" formControlName="ifsc">
+            <input type="number" placeholder="enter your amount $" formControlName="amount">
+        </div>
+
+        <input type="submit" (click)=" saving(this.paymentForm.value)" value="Book Now" class="btn">
+        <a href="../../images/qr.svg"><img src="../../images/qr.svg"></a>
+        <!-- <input type="button" value="View Details" class="btn"> -->
+    </form>
+    <!-- 
+
+    <br><br>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Location</th>
+                <th>Service</th>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Bank</th>
+                <th>Ifsc</th>
+                <th>Amount</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of alluserData">
+                <td>{
+
+{
+ 
+ user.name
+}
+}</td>
+                <td>{
+
+{
+ 
+ user.email
+}
+}</td>
+                <td>{
+
+{
+ 
+ user.location
+}
+}</td>
+                <td>{
+
+{
+ 
+ user.service
+}
+}</td>
+                <td>{
+
+{
+ 
+ user.date
+}
+}</td>
+                <td>{
+
+{
+ 
+ user.category
+}
+}</td>
+                <td>{
+
+{
+ 
+ user.bank
+}
+}</td>
+                <td>{
+
+{
+ 
+ user.ifsc
+}
+}</td>
+                <td>{
+
+{
+ 
+ user.amount
+}
+}</td>
+                <td><button class="btn">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</section> -->

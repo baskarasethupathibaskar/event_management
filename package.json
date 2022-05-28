@@ -1,0 +1,30 @@
+{
+  "name": "event_management",
+  "version": "1.0.0",
+  "description": "demo project",
+  "main": "index.js",
+  "scripts": {
+    "test": "no test",
+    "start": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baskarasethupathibaskar/event_management.git"
+  },
+  "keywords": [
+    "event",
+    "node"
+  ],
+  "author": "Baskar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baskarasethupathibaskar/event_management/issues"
+  },
+  "homepage": "https://github.com/baskarasethupathibaskar/event_management#readme",
+  "dependencies": {
+    "angular-validation": "^1.4.5",
+    "bootstrap": "^5.1.3",
+    "fb-ts": "^3.0.4",
+    "ngx-light-carousel": "^1.1.16"
+  }
+}
