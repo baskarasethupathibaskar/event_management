@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventdashboardComponent } from './eventdashboard.component';
+import { ImgdashComponent } from './imgdash.component';
 
-describe('EventdashboardComponent', () => {
-  let component: EventdashboardComponent;
-  let fixture: ComponentFixture<EventdashboardComponent>;
+describe('ImgdashComponent', () => {
+  let component: ImgdashComponent;
+  let fixture: ComponentFixture<ImgdashComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EventdashboardComponent ]
+      declarations: [ ImgdashComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EventdashboardComponent);
+    fixture = TestBed.createComponent(ImgdashComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

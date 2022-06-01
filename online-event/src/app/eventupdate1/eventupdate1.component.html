@@ -1,0 +1,22 @@
+<h1 class="heading1"><span>Event</span>Add</h1>
+<a href="eventupdate"><button class="btn1">ADD</button></a>
+<section>
+    <div class="tab">
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Event Review</th>
+                    <th>Event Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of alluserData">
+                    <td>{{ user.ename }}</td>
+                    <td>{{ user.ereview}}</td>
+                    <td>{{ user.eamount }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

@@ -4,15 +4,27 @@
 
     <form [formGroup]="FeedForm" (ngSubmit)="saving(this.FeedForm.value)">
         <div class="inputBox">
-            <input type="text" placeholder="name" formControlName="name1">
-            <input type="text" placeholder="event" formControlName="event">
+            <input type="text" placeholder="enter your name" formControlName="name1">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="FeedForm.controls['name1'].touched && FeedForm.hasError('required','name1')">
+                    *event name is required</span>
+            </div>
+            <input type="text" placeholder="event name" formControlName="event">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="FeedForm.controls['event'].touched && FeedForm.hasError('required','event')">
+                    *event name is required</span>
+            </div>
         </div>
-        <!-- <div class="inputBox">
-            <input type="number" placeholder="mobile" formControlName="mobile">
-            <input type="number" placeholder="adhar" formControlName="adhar">
-        </div> -->
+      
         <textarea name="" placeholder="your comments" id="" cols="30" rows="10" formControlName="comment"></textarea>
-        <input type="submit" (click)=" saving(this.FeedForm.value)" value="Enter Your Feedback" class="btn">
+        <div class="validator">
+            <span class="text-danger"
+                *ngIf="FeedForm.controls['comment'].touched && FeedForm.hasError('required','comment')">
+                *event name is required</span>
+        </div>
+        <input type="submit" value="Enter Your Feedback" class="btn">
     </form>
 
 </section>

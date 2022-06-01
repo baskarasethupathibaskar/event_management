@@ -30,6 +30,8 @@ export class ContactdashboardComponent implements OnInit {
   empRecord: any;
 
   constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
+    this.saving( )
+
 
     this.contactForm = this.fb.group({
       name: [this.userRecord.name],
@@ -41,7 +43,7 @@ export class ContactdashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.saving(this.contactForm.value)
+    this.saving()
 
   }
   get name() {
@@ -60,29 +62,40 @@ export class ContactdashboardComponent implements OnInit {
     return this.contactForm.get('adhar')!;
   }
 
-  saving(formData: NgForm) {
+  saving( ) {
     //   console.log("from form", Formvalue);
     //   this.api.storeData1(Formvalue).subscribe((data) => {
     //    console.log("data returned from server", data);
     //   })
     //  }
     
-    //angular to couch POST
-     this.api.add("online_management", formData).subscribe(res => {
-      console.log(res);
-      // alert("Your event booked successfully!");
-      console.log('basco')
-      this.contactForm.reset();
-    }, rej => {
-      // alert("opps! Can not post data" + rej);
-    });
+    // //angular to couch POST
+    //  this.api.add("online_management", formData).subscribe(res => {
+    //   console.log(res);
+    //   console.log('basco')
+    //   this.contactForm.reset();
+    // }, rej => {
+    //   // alert("opps! Can not post data" + rej);
+    // });
     
+     let data = {
+      selector: {
+        type: "event"
+      },
+      "sort": [
+        {
+           "createdBy": "desc"
+        }
+     ]
+    }
+
     //get the all data
-    this.api.get("online_management").subscribe(res => {
+    this.api.get(data).subscribe(res => {
       this.alluser=res;
       console.log(res);
-      this.alluser = this.alluser.rows;
-      this.alluserData = this.alluser.map((el: any)=>el.doc);
+      this.alluser = this.alluser.docs;
+      this.alluserData = this.alluser
+      // .map((el: any)=>el.doc);
       console.log(this.alluserData[0]);
       for (const array in this.alluserData) {
         console.log(this.alluserData[array])
@@ -93,16 +106,16 @@ export class ContactdashboardComponent implements OnInit {
       // alert("opps! Can not post data" + rej);
     });
     
-    // get the data by using particular id
-    this.api.getDocsByID("online_management","ecb83221a3496d8815d5c195441742ac").subscribe(res => {
-      //  console.log(res);
-       var temp=res;
-       console.log(temp);
-      //  alert("One ID got from database");
-       this.empRecord.reset();
-     },rej=>{
-      //  alert("404"+rej);
-     });
+    // // get the data by using particular id
+    // this.api.getDocsByID("online_management","ecb83221a3496d8815d5c195441742ac").subscribe(res => {
+    //   //  console.log(res);
+    //    var temp=res;
+    //    console.log(temp);
+    //   //  alert("One ID got from database");
+    //    this.empRecord.reset();
+    //  },rej=>{
+    //   //  alert("404"+rej);
+    //  });
     
     }
     }

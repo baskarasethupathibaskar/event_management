@@ -5,24 +5,18 @@
     <form [formGroup]="loginForm" (ngSubmit)="saving(loginForm.value)">
         <div class="inputBox" [class.has-error]="userid?.invalid">
             <input type="text" placeholder="user id" formControlName="userid" required>
-            <div class="help-block text-danger" *ngIf="loginForm.controls['userid'].touched">
-                <span *ngIf="loginForm.hasError('required','userid')">
-                 user id is required
-                </span>
-                <span>
-                    Please Enter Your Valid userid!!!
-                </span>
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="loginForm.controls['userid'].touched && loginForm.hasError('required','userid')">
+                    *userid is required</span>
             </div>
         </div><br>
         <div class="inputBox" [class.has-error]="password?.invalid">
-            <input type="text" placeholder="user password" formControlName="password" required>
-            <div class="help-block text-danger" *ngIf="loginForm.controls['password'].touched">
-                <span *ngIf="loginForm.hasError('required','password')">
-                    password is required
-                </span>
-                <span *ngIf="loginForm.controls['password']">
-                    Please Enter Your Valid Password!!!
-                </span>
+            <input type="password" placeholder="user password" formControlName="password" required>
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="loginForm.controls['password'].touched && loginForm.hasError('required','password')">
+                    *password is required</span>
             </div>
         </div>
        <div><input type="submit" value=" Click! Login" class="btn"></div>

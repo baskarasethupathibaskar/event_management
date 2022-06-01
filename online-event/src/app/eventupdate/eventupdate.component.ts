@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormBuilder, NgForm } from '@angular/forms';
+import { FormGroup,FormBuilder, NgForm,Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 // import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 // import * as XLSX from 'xlsx';
 @Component({
-  selector: 'app-service',
-  templateUrl: './service.component.html',
-  styleUrls: ['./service.component.css']
+  selector: 'app-eventupdate',
+  templateUrl: './eventupdate.component.html',
+  styleUrls: ['./eventupdate.component.css']
 })
-export class ServiceComponent implements OnInit {
+export class EventupdateComponent implements OnInit {
   eForm: FormGroup;
   userRecord: any = {
     ename: '',
@@ -23,13 +23,13 @@ export class ServiceComponent implements OnInit {
   alluser: any;
   empRecord: any;
   constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
-   this.saving()
-
     this.eForm = this.fb.group({
-      ename: [this.userRecord.ename],
-      ereview: [this.userRecord.ereview],
-      eamount: [this.userRecord.eamount],
+      ename:['',Validators.required],
+      ereview:['',Validators.required],
+      eamount:['',Validators.required],
+     
     });
+
   }
 
   ngOnInit(): void {
@@ -44,53 +44,49 @@ export class ServiceComponent implements OnInit {
     return this.eForm.get('eamount')!;
   }
 
-  saving( ) {
+  saving(Formvalue: any) {
     //   console.log("from form", Formvalue);
     //   this.api.storeData1(Formvalue).subscribe((data) => {
     //    console.log("data returned from server", data);
     //   })
     //  }
+    // this.router.navigate(['eventupdate1']) 
+    const d = new Date();
+    const event1 = {
+      ename: Formvalue.ename,
+      ereview: Formvalue.ereview,
+      eamount: Formvalue.eamount,
+      type: "eventupdate",
+      createdBy:d
 
-    let data = {
-      selector: {
-        type: "eventupdate"
-      },
-      "sort": [
-         {
-            "createdBy": "desc"
-         }
-      ]
     }
+    //angular to couch POST
+     this.api.add("online_management", event1).subscribe(res => {
+      console.log(res);
+      // alert("thanks to give your feedback!");
+      console.log('basco')
+      this.eForm.reset();
+    }, rej => {
+      // alert("opps! Can not post data" + rej);
+
+    });
     
-
-
-    // //angular to couch POST
-    //  this.api.add("online_management", formData).subscribe(res => {
+    // //get the all data
+    // this.api.get("online_management").subscribe(res => {
+    //   // this.router.navigate(['packdash1'])
+    //   this.alluser=res;
     //   console.log(res);
-    //   // alert("thanks to give your feedback!");
-    //   console.log('basco')
-    //   this.eForm.reset();
+    //   this.alluser = this.alluser.rows;
+    //   this.alluserData = this.alluser.map((el: any)=>el.doc);
+    //   console.log(this.alluserData[0]);
+    //   for (const array in this.alluserData) {
+    //     console.log(this.alluserData[array])
+    //   }
+    //   // alert("Your data was get successfully!");
+    //   this.empRecord.reset();
     // }, rej => {
     //   // alert("opps! Can not post data" + rej);
     // });
-    
-    //get the all data
-    this.api.get(data).subscribe(res => {
-      // this.router.navigate(['packdash1'])
-      this.alluser=res;
-      console.log(res);
-      this.alluser = this.alluser.docs;
-      this.alluserData = this.alluser
-      // .map((el: any)=>el.doc);
-      console.log(this.alluserData[0]);
-      for (const array in this.alluserData) {
-        console.log(this.alluserData[array])
-      }
-      // alert("Your data was get successfully!");
-      this.empRecord.reset();
-    }, rej => {
-      // alert("opps! Can not post data" + rej);
-    });
     
     // // get the data by using particular id
     // this.api.getDocsByID("online_management"," ").subscribe(res => {

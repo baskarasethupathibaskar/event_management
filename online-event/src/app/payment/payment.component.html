@@ -4,9 +4,24 @@
     <form [formGroup]="paymentForm" (ngSubmit)="saving(this.paymentForm.value)">
         <h1 class="heading1"> <span>Personal</span>Details</h1>
         <div class="inputBox">
-            <input type="text" placeholder="name" formControlName="name">
-            <input type="email" placeholder="email" formControlName="email">
+            <input type="text" placeholder=" enter your name" formControlName="name">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="paymentForm.controls['name'].touched && paymentForm.hasError('required','name')">
+                    *name is required</span>
+            </div>
+            <input type="email" placeholder="enter your email" formControlName="email">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="paymentForm.controls['email'].touched && paymentForm.hasError('required','email')">
+                    *email is required</span>
+            </div>
             <input type="date" placeholder="service date" formControlName="date">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="paymentForm.controls['date'].touched && paymentForm.hasError('required','date')">
+                    *date is required</span>
+            </div>
         </div>
         <div class="inputBox">
             <label>select your location</label>
@@ -27,10 +42,7 @@
             <label>select your Event</label>
             <select name="bankname" class="inputBox" required formControlName="service">
                 <option selected="selected" value="0">--select your Event --</option>
-                <!-- <option>venue</option> -->
-                <!-- <option>invitation</option> -->
                 <option>entertainment</option>
-                <!-- <option>foods</option> -->
                 <option>Photos and Videos</option>
                 <option>Birthday</option>
                 <option>Weddings</option>
@@ -88,101 +100,20 @@
                 <option>BANK OF INDIA</option>
                 <option>BANK OF MAHARASHTRA</option>
             </select>
-            <input type="text" placeholder="IFSC" formControlName="ifsc">
+            <input type="text" placeholder="enter your IFSC" formControlName="ifsc">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="paymentForm.controls['ifsc'].touched && paymentForm.hasError('required','ifsc')">
+                    *ifsc is required</span>
+            </div>
             <input type="number" placeholder="enter your amount $" formControlName="amount">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="paymentForm.controls['amount'].touched && paymentForm.hasError('required','amount')">
+                    *amount is required</span>
+            </div>
         </div>
 
-        <input type="submit" (click)=" saving(this.paymentForm.value)" value="Book Now" class="btn">
+        <input type="submit"  value="Book Now" class="btn">
         <a href="../../images/qr.svg"><img src="../../images/qr.svg"></a>
-        <!-- <input type="button" value="View Details" class="btn"> -->
     </form>
-    <!-- 
-
-    <br><br>
-    <br><br>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Location</th>
-                <th>Service</th>
-                <th>Date</th>
-                <th>Category</th>
-                <th>Bank</th>
-                <th>Ifsc</th>
-                <th>Amount</th>
-                <th>Edit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let user of alluserData">
-                <td>{
-
-{
- 
- user.name
-}
-}</td>
-                <td>{
-
-{
- 
- user.email
-}
-}</td>
-                <td>{
-
-{
- 
- user.location
-}
-}</td>
-                <td>{
-
-{
- 
- user.service
-}
-}</td>
-                <td>{
-
-{
- 
- user.date
-}
-}</td>
-                <td>{
-
-{
- 
- user.category
-}
-}</td>
-                <td>{
-
-{
- 
- user.bank
-}
-}</td>
-                <td>{
-
-{
- 
- user.ifsc
-}
-}</td>
-                <td>{
-
-{
- 
- user.amount
-}
-}</td>
-                <td><button class="btn">Edit</button></td>
-            </tr>
-        </tbody>
-    </table>
-
-</section> -->

@@ -1,0 +1,20 @@
+<h1 class="heading1"><span>ADD</span>Image</h1>
+<a href="imgupload"><button class="btn1">ADD</button></a>
+<section>
+    <div class="tab">
+        <!-- <input *ngIf="autoClick" type="submit" value="View Booking Events" class="btn"> -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Add Images</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of alluserData">
+                    <td><img src="{{user.upload}}"></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

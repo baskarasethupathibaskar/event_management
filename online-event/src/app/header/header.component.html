@@ -2,15 +2,26 @@
 
     <a href="#" class="logo"><span>online</span>Event</a>
 
-    <nav class="navbar">
+    <nav class="navbar" *ngIf="this.apii.show">
         <a href="home">home</a>
         <a href="service">Event</a>
         <a href="about">about</a>
         <a href="gallery">gallery</a>
         <a href="price">package</a>
         <a href="review">review</a>
-        <a href="contact">Event</a>
-        <a href="login">ADMIN</a>
+        <a href="contact" *ngIf="this.apii.show">Event Book</a>
+        <a href="login" *ngIf="this.apii.show">ADMIN</a>
+    </nav>
+
+    <nav class="navbar" *ngIf="this.apii.loginshow">
+        <a href="home">home</a>
+        <a href="service">Event</a>
+        <a href="about">about</a>
+        <a href="gallery">gallery</a>
+        <a href="price">package</a>
+        <a href="review">review</a>
+        <a href="contact">Register</a>
+        <a href="login">Log Out</a>
     </nav>
 
     <div id="menu-bars" class="fas fa-bars"></div>

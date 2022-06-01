@@ -1,19 +1,20 @@
-<h1 class="heading1"><span>Feed</span>Back</h1>
+<h1 class="heading1"><span>Pack</span>age</h1>
+<a href="packdash"><button class="btn1">ADD</button></a>
 <section>
     <div class="tab">
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
                     <th>Event</th>
-                    <th>Feedback</th>
+                    <th>Amount</th>
+                    <th>Services</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let user of alluserData">
-                    <td>{{ user.name1 }}</td>
-                    <td>{{ user.event}}</td>
-                    <td>{{ user.comment }}</td>
+                    <td>{{ user.event1 }}</td>
+                    <td>{{ user.amount1}}</td>
+                    <td>{{ user.service1 }}</td>
                 </tr>
             </tbody>
         </table>

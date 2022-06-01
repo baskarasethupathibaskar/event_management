@@ -5,16 +5,14 @@ import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 // import * as XLSX from 'xlsx';
 @Component({
-  selector: 'app-service',
-  templateUrl: './service.component.html',
-  styleUrls: ['./service.component.css']
+  selector: 'app-imgdash1',
+  templateUrl: './imgdash1.component.html',
+  styleUrls: ['./imgdash1.component.css']
 })
-export class ServiceComponent implements OnInit {
-  eForm: FormGroup;
+export class Imgdash1Component implements OnInit {
+  imgForm: FormGroup;
   userRecord: any = {
-    ename: '',
-    ereview: '',
-    eamount: '',
+    upload: '',
   };
   data: any;
   formGroup: any;
@@ -24,36 +22,38 @@ export class ServiceComponent implements OnInit {
   empRecord: any;
   constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
    this.saving()
-
-    this.eForm = this.fb.group({
-      ename: [this.userRecord.ename],
-      ereview: [this.userRecord.ereview],
-      eamount: [this.userRecord.eamount],
+    this.imgForm = this.fb.group({
+      upload: [this.userRecord.upload],
     });
   }
 
   ngOnInit(): void {
   }
-  get ename() {
-    return this.eForm.get('ename')!;
+  get upload() {
+    return this.imgForm.get('upload')!;
   }
-  get ereview() {
-    return this.eForm.get('ereview')!;
-  }
-  get eamount() {
-    return this.eForm.get('eamount')!;
-  }
+  
 
-  saving( ) {
+  saving() {
     //   console.log("from form", Formvalue);
     //   this.api.storeData1(Formvalue).subscribe((data) => {
     //    console.log("data returned from server", data);
     //   })
     //  }
-
+    
+    // //angular to couch POST
+    //  this.api.add("online_management", formData).subscribe(res => {
+    //   console.log(res);
+    //   // alert("thanks to give your feedback!");
+    //   console.log('basco')
+    //   this.imgForm.reset();
+    // }, rej => {
+    //   // alert("opps! Can not post data" + rej);
+    // });
+    
     let data = {
       selector: {
-        type: "eventupdate"
+        type: "imgupdate"
       },
       "sort": [
          {
@@ -61,18 +61,6 @@ export class ServiceComponent implements OnInit {
          }
       ]
     }
-    
-
-
-    // //angular to couch POST
-    //  this.api.add("online_management", formData).subscribe(res => {
-    //   console.log(res);
-    //   // alert("thanks to give your feedback!");
-    //   console.log('basco')
-    //   this.eForm.reset();
-    // }, rej => {
-    //   // alert("opps! Can not post data" + rej);
-    // });
     
     //get the all data
     this.api.get(data).subscribe(res => {

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserrecordsComponent } from './userrecords.component';
+import { PackagedashComponent } from './packagedash.component';
 
-describe('UserrecordsComponent', () => {
-  let component: UserrecordsComponent;
-  let fixture: ComponentFixture<UserrecordsComponent>;
+describe('PackagedashComponent', () => {
+  let component: PackagedashComponent;
+  let fixture: ComponentFixture<PackagedashComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserrecordsComponent ]
+      declarations: [ PackagedashComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserrecordsComponent);
+    fixture = TestBed.createComponent(PackagedashComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

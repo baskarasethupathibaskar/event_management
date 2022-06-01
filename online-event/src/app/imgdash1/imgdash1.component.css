@@ -1,8 +1,13 @@
 section{
-    padding:7rem 10%;
+    padding:22rem 10%;
+    margin-left: 5%;
+}
+
+table{
+    margin-top: -22%;
 }
 .contact form{
-    max-width: 70rem;
+    max-width: 50rem;
     margin:1rem auto;
     text-align: center;
 }
@@ -24,7 +29,6 @@ section{
     color:#fff;
     text-transform: none;
 }
-
 
 .contact form .inputBox input::placeholder,
 .contact form textarea::placeholder{
@@ -79,3 +83,36 @@ table thead tr th {
     }
 
 }
+
+.heading1{
+    color:#fff;
+    margin-top: 8%;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.heading1 span{
+    color:var(--main-color);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.btn1{
+    background: #666;
+    border-radius: .5rem;
+    color:#fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-left: 930px;
+    margin-top: 1rem;
+    padding:.8rem 3rem;
+}
+
+.btn1:hover{
+    background:var(--main-color);
+}
+

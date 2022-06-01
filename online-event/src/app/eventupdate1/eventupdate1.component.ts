@@ -5,11 +5,11 @@ import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 // import * as XLSX from 'xlsx';
 @Component({
-  selector: 'app-service',
-  templateUrl: './service.component.html',
-  styleUrls: ['./service.component.css']
+  selector: 'app-eventupdate1',
+  templateUrl: './eventupdate1.component.html',
+  styleUrls: ['./eventupdate1.component.css']
 })
-export class ServiceComponent implements OnInit {
+export class Eventupdate1Component implements OnInit {
   eForm: FormGroup;
   userRecord: any = {
     ename: '',

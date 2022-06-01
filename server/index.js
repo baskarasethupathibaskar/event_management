@@ -53,6 +53,7 @@ app.post("/postdata2", function (req, res) {
   var objectnew2 = {
     userid: req.body.userid,
     password: req.body.password,
+    type:"login"
   };
   // console.log("data from angular", objectnew2);
   const fetchData ={

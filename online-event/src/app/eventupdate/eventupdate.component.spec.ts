@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PackagedashboardComponent } from './packagedashboard.component';
+import { EventupdateComponent } from './eventupdate.component';
 
-describe('PackagedashboardComponent', () => {
-  let component: PackagedashboardComponent;
-  let fixture: ComponentFixture<PackagedashboardComponent>;
+describe('EventupdateComponent', () => {
+  let component: EventupdateComponent;
+  let fixture: ComponentFixture<EventupdateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PackagedashboardComponent ]
+      declarations: [ EventupdateComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PackagedashboardComponent);
+    fixture = TestBed.createComponent(EventupdateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

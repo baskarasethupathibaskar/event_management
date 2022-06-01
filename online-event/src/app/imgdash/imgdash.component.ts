@@ -5,61 +5,34 @@ import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 // import * as XLSX from 'xlsx';
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css'],
+  selector: 'app-imgdash',
+  templateUrl: './imgdash.component.html',
+  styleUrls: ['./imgdash.component.css']
 })
-export class ContactComponent implements OnInit {
-  contactForm: FormGroup;
-  AppService: any;
-  static find: any;
-  array:any = [];
+export class ImgdashComponent implements OnInit {
+  imgForm: FormGroup;
   userRecord: any = {
-  name: '',
-  email: '',
-  mobile: '',
-  adhar: '',
-  address: '',
-
- };
+    upload: '',
+  };
   data: any;
-  response: any;
   formGroup: any;
   totalUseage: any;
   alluserData: any;
   alluser: any;
   empRecord: any;
-
   constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
-
-    this.contactForm = this.fb.group({
-      name:['',Validators.required],
-      email:['',Validators.required],
-      mobile:['',Validators.required],
-      adhar:['',Validators.required],
-      address:['',Validators.required],
+    this.imgForm = this.fb.group({
+      upload:['',Validators.required],
 
     });
   }
 
   ngOnInit(): void {
-
   }
-  get name() {
-    return this.contactForm.get('name')!;
+  get upload() {
+    return this.imgForm.get('upload')!;
   }
-  get address() {
-    return this.contactForm.get('address')!;
-  }
-  get email() {
-    return this.contactForm.get('email')!;
-  }
-  get mobile() {
-    return this.contactForm.get('mobile')!;
-  }
-  get adhar() {
-    return this.contactForm.get('adhar')!;
-  }
+  
 
   saving(Formvalue: any) {
     //   console.log("from form", Formvalue);
@@ -67,41 +40,32 @@ export class ContactComponent implements OnInit {
     //    console.log("data returned from server", data);
     //   })
     //  }
+    
     const d = new Date();
-    const event = {
-      name: Formvalue.name,
-      email: Formvalue.email,
-      mobile: Formvalue.mobile,
-      adhar: Formvalue.adhar,
-      address: Formvalue.address,
-      type: "event",
+    const img = {
+      upload: Formvalue.upload,
+      type: "imgupdate",
       createdBy:d
 
     }
 
     //angular to couch POST
-     this.api.add("online_management", event).subscribe(res => {
-      //  this.router.navigate(['cdash/'])
+     this.api.add("online_management", img).subscribe(res => {
       console.log(res);
-      // alert("Your datas send to admin successfully!");
+      // alert("thanks to give your feedback!");
       console.log('basco')
-      this.contactForm.reset();
+      this.imgForm.reset();
     }, rej => {
       // alert("opps! Can not post data" + rej);
     });
     
-    // let data = {
-    //   selector: {
-    //     type: "event"
-    //   }
-    // }
     // //get the all data
     // this.api.get("online_management").subscribe(res => {
+    //   // this.router.navigate(['packdash1'])
     //   this.alluser=res;
     //   console.log(res);
-    //   this.alluser = this.alluser.docs;
-    //   this.alluserData = this.alluser;
-    //   // .map((el: any)=>el.doc);
+    //   this.alluser = this.alluser.rows;
+    //   this.alluserData = this.alluser.map((el: any)=>el.doc);
     //   console.log(this.alluserData[0]);
     //   for (const array in this.alluserData) {
     //     console.log(this.alluserData[array])
@@ -113,7 +77,7 @@ export class ContactComponent implements OnInit {
     // });
     
     // // get the data by using particular id
-    // this.api.getDocsByID("online_management","ecb83221a3496d8815d5c195441742ac").subscribe(res => {
+    // this.api.getDocsByID("online_management"," ").subscribe(res => {
     //   //  console.log(res);
     //    var temp=res;
     //    console.log(temp);

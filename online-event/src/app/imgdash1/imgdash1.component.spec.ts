@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RecordComponent } from './record.component';
+import { Imgdash1Component } from './imgdash1.component';
 
-describe('RecordComponent', () => {
-  let component: RecordComponent;
-  let fixture: ComponentFixture<RecordComponent>;
+describe('Imgdash1Component', () => {
+  let component: Imgdash1Component;
+  let fixture: ComponentFixture<Imgdash1Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RecordComponent ]
+      declarations: [ Imgdash1Component ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RecordComponent);
+    fixture = TestBed.createComponent(Imgdash1Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

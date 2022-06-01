@@ -8,6 +8,9 @@ import { HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class Apiservice1Service {
+  loginshow:boolean=false;
+  show:boolean=true;
+
   url='https://97233c10-e8bd-4684-98ca-20e5eaf8dd35-bluemix.cloudantnosqldb.appdomain.cloud/'
   dbUserName='apikey-v2-msz5pn0gamsoigpftay3cndoju75rdeejvo1cd3paw0'
   dbPassword = '1cd6b51776516316358ce28da3097318'
@@ -25,11 +28,19 @@ export class Apiservice1Service {
     const url = this.url + db;
     return this.http.post(url, doc, this.httpOptions)
   }
-  get(db: string): Observable<{}> {
-    const url = this.url + db + '/_all_docs?include_docs=true';
-    return this.http.get(url, this.httpOptions)
+  // get(db: string): Observable<{}> {
+  //   const url = this.url + db + '/_all_docs?include_docs=true';
+  //   return this.http.get(url, this.httpOptions)
+
+  // }
+
+  get(data:any): Observable<{}> {
+    // const url = this.url + db + '/_all_docs?include_docs=true';
+    const url = this.url +'online_management/_find';
+    return this.http.post( url,data, this.httpOptions)
 
   }
+
   getDocsByID(db: string,id: string): Observable<{}> {
     const url = this.url + db + '/'+id;
     return this.http.get(url, this.httpOptions)
@@ -37,6 +48,12 @@ export class Apiservice1Service {
   deleteData(id: any, rev: any): Observable<{}> {
     const urld = this.url + 'pay/' + id + '/?rev=' + rev;
     return this.http.delete(urld, this.httpOptions);
+  }
+  showoff(){
+    this.loginshow=!this.loginshow;
+  
+    this.show=!this.show;
+    console.log(this.show)
   }
 
 }

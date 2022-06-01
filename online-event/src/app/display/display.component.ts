@@ -34,6 +34,7 @@ export class DisplayComponent implements OnInit {
   alluser: any;
   empRecord: any;
  constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
+  this.saving( )
 
  
   this.paymentForm = this.fb.group({
@@ -52,7 +53,6 @@ export class DisplayComponent implements OnInit {
  }
 
  ngOnInit(): void {
-  this.saving(this.paymentForm.value)
    console.log("pyment compnent is working")
  }
  get name() {
@@ -83,14 +83,23 @@ export class DisplayComponent implements OnInit {
   return this.paymentForm.get('amount')!;
  }
 
-saving(formData: NgForm) {
+saving( ) {
 //   console.log("from form", Formvalue);
 //   this.api.storeData1(Formvalue).subscribe((data) => {
 //    console.log("data returned from server", data);
 //   })
 //  }
 
-
+let data = {
+  selector: {
+    type: "pay"
+  },
+  "sort": [
+     {
+        "createdBy": "desc"
+     }
+  ]
+}
 
 //angular to couch POST
 //  this.api.add("pay", formData).subscribe(res => {
@@ -102,11 +111,12 @@ saving(formData: NgForm) {
 //   // alert("opps! Can not post data" + rej);
 // });
 //get the all data
-this.api.get("pay").subscribe(res => {
+this.api.get(data).subscribe(res => {
   this.alluser=res;
   console.log(res);
-  this.alluser = this.alluser.rows;
-  this.alluserData = this.alluser.map((el: any)=>el.doc);
+  this.alluser = this.alluser.docs;
+  this.alluserData = this.alluser
+  // .map((el: any)=>el.doc);
   console.log(this.alluserData[0]);
   for (const array in this.alluserData) {
     console.log(this.alluserData[array])
@@ -117,16 +127,16 @@ this.api.get("pay").subscribe(res => {
   // alert("opps! Can not post data" + rej);
 });
 
-// get the data by using particular id
-this.api.getDocsByID("pay","ecb83221a3496d8815d5c195441742ac").subscribe(res => {
-  //  console.log(res);
-   var temp=res;
-   console.log(temp);
-  //  alert("One ID got from database");
-   this.empRecord.reset();
- },rej=>{
-  //  alert("404"+rej);
- });
+// // get the data by using particular id
+// this.api.getDocsByID("pay","ecb83221a3496d8815d5c195441742ac").subscribe(res => {
+//   //  console.log(res);
+//    var temp=res;
+//    console.log(temp);
+//   //  alert("One ID got from database");
+//    this.empRecord.reset();
+//  },rej=>{
+//   //  alert("404"+rej);
+//  });
 
 }
 }

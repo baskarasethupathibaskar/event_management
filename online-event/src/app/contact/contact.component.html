@@ -5,41 +5,39 @@
     <form [formGroup]="contactForm" (ngSubmit)="saving(this.contactForm.value)">
         <div class="inputBox">
             <input type="text" placeholder="name" formControlName="name">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="contactForm.controls['name'].touched && contactForm.hasError('required','name')">
+                    *name is required</span>
+            </div>
             <input type="email" placeholder="email" formControlName="email">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="contactForm.controls['email'].touched && contactForm.hasError('required','email')">
+                    *email is required</span>
+            </div>
         </div>
         <div class="inputBox">
-            <input type="number" placeholder="mobile" formControlName="mobile">
-            <input type="number" placeholder="adhar" formControlName="adhar">
+            <input type="number" placeholder="mobile number" formControlName="mobile">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="contactForm.controls['mobile'].touched && contactForm.hasError('required','mobile')">
+                    *mobile num is required</span>
+            </div>
+            <input type="number" placeholder="adhar number" formControlName="adhar">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="contactForm.controls['adhar'].touched && contactForm.hasError('required','adhar')">
+                    *adhar no is required</span>
+            </div>
         </div>
         <textarea name="" placeholder="your address" id="" cols="30" rows="10" formControlName="address"></textarea>
+        <div class="validator">
+            <span class="text-danger"
+                *ngIf="contactForm.controls['address'].touched && contactForm.hasError('required','address')">
+                *adhar no is required</span>
+        </div>
         <input type="submit" value="Book Your Event" class="btn">
     </form>
 
 </section>
-<!-- 
-<section>
-    <div class="tab">
-    //<input *ngIf="autoClick" type="submit" value="View Booking Events" class="btn">
-    <table >
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Mobile</th>
-                <th>Adhar</th>
-                <th>Address</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let user of alluserData">
-                <td>{{ user.name }}</td>
-                <td>{{ user.email}}</td>
-                <td>{{ user.mobile }}</td>
-                <td>{{ user.adhar }}</td>
-                <td>{{ user.address }}</td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
-    </section>
-    -->

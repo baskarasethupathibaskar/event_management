@@ -50,3 +50,6 @@
     color:var(--main-color);
 }
 
+section {
+    padding: 2rem 9%;
+}

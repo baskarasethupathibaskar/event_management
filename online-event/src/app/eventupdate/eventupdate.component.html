@@ -1,0 +1,30 @@
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>Evnet</span> Update </h1>
+
+    <form [formGroup]="eForm" (ngSubmit)="saving(this.eForm.value)">
+        <div class="inputBox">
+            <input type="text" placeholder="event name" formControlName="ename">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="eForm.controls['ename'].touched && eForm.hasError('required','ename')">
+                    *event name is required</span>
+            </div>
+            <input type="text" placeholder="event review" formControlName="ereview">
+            <div class="validator">
+                <span class="text-danger"
+                    *ngIf="eForm.controls['ereview'].touched && eForm.hasError('required','ereview')">
+                    *review is required</span>
+            </div>
+        </div>
+
+        <textarea name="" placeholder="event amount" id="" cols="30" rows="10" formControlName="eamount"></textarea>
+        <div class="validator">
+            <span class="text-danger"
+                *ngIf="eForm.controls['eamount'].touched && eForm.hasError('required','eamount')">
+                *event amount  is required</span>
+        </div>
+        <input type="submit" value="ADD Event" class="btn">
+    </form>
+
+</section>

@@ -1,31 +1,100 @@
-table thead tr th {
-width: 13%;
-text-align: center;
-border: none    ;
-padding: 5px;
-color: white;
-font-size: large;
-font-weight: bold;
-background-color: rgba(0, 0, 0, 0.486);
-position:static;
+section{
+    padding:22rem 10%;
+    margin-left: 5%;
 }
 
-table tbody tr td  {
-    /* border: 1px solid rgb(150, 150, 150); */
+table{
+    margin-top: -22%;
+}
+.contact form{
+    max-width: 50rem;
+    margin:1rem auto;
     text-align: center;
-    font-size: 15px;
-    font-weight: 900;
-    background-color: antiquewhite;
-    border:1px solid gray;
-  }
-
-
-table thead tr th:hover {
-    color: black;
-    background: white;
 }
 
-section {
-    padding: 7rem 9%;
-}  
+.contact form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+.contact form .inputBox input,
+.contact form textarea{
+    width: 100%;
+    background:#333;
+    border-radius: .5rem;
+    padding:1rem;
+    margin:.7rem 0;
+    font-size: 1.5rem;
+    color:#fff;
+    text-transform: none;
+}
+
+.contact form .inputBox input::placeholder,
+.contact form textarea::placeholder{
+    color:#eee;
+    text-transform: capitalize;
+}
+
+.contact form .inputBox input:focus,
+.contact form textarea:focus{
+    background:#444;
+}
+
+.contact form .inputBox input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+table thead tr th {
+    width: 13%;
+    text-align: center;
+    border: none    ;
+    padding: 5px;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(29, 29, 29, 0.096) 0%, rgb(30, 31, 31) 100%);
+    
+    }
+
+    table tbody tr td  {
+        /* border: 1px solid rgb(150, 150, 150); */
+        text-align: center;
+        font-size: 15px;
+        font-weight: 900;
+        background-color: antiquewhite;
+        border:1px solid gray;
+      }
+    
+    table thead tr th:hover {
+        color: black;
+        background: white;
+    }
+
+
+
+@media (max-width:450px){
+    .contact form .inputBox input{
+        width: 100%;
+    }
+
+}
+
+.heading1{
+    color:#fff;
+    margin-top: 8%;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.heading1 span{
+    color:var(--main-color);
+    font-weight: 900;
+    text-transform: uppercase;
+}

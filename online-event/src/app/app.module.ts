@@ -12,7 +12,6 @@ import { PriceComponent } from './price/price.component';
 import { ReviewComponent } from './review/review.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PaymentComponent } from './payment/payment.component';
 import { VenueComponent } from './venue/venue.component';
@@ -25,20 +24,21 @@ import { AnimationComponent } from './animation/animation.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginformComponent } from './loginform/loginform.component';
-import { RecordComponent } from './record/record.component';
 import { DisplayComponent } from './display/display.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { Feedback1Component } from './feedback1/feedback1.component';
 import { DjpartyComponent } from './djparty/djparty.component';
 import { FunclupComponent } from './funclup/funclup.component';
 import { PrewedComponent } from './prewed/prewed.component';
-import { EventdashboardComponent } from './eventdashboard/eventdashboard.component';
-import { PackagedashboardComponent } from './packagedashboard/packagedashboard.component';
-import { ReviewlistComponent } from './reviewlist/reviewlist.component';
-import { UserrecordsComponent } from './userrecords/userrecords.component';
 import { AdminComponent } from './admin/admin.component';
 import { ContactdashboardComponent } from './contactdashboard/contactdashboard.component';
 import { Review1Component } from './review1/review1.component';
+import { PackagedashComponent } from './packagedash/packagedash.component';
+import { Packagedash1Component } from './packagedash1/packagedash1.component';
+import { EventupdateComponent } from './eventupdate/eventupdate.component';
+import { Eventupdate1Component } from './eventupdate1/eventupdate1.component';
+import { ImgdashComponent } from './imgdash/imgdash.component';
+import { Imgdash1Component } from './imgdash1/imgdash1.component';
 
 const routes: Routes = [
   {path:'venue',component:VenueComponent},
@@ -61,16 +61,18 @@ const routes: Routes = [
   {path:'login',component:LoginformComponent},
   {path:'feedback',component:FeedbackComponent},
   {path:'feedback1',component:Feedback1Component},
-  {path:'eventdashboard',component:EventdashboardComponent},
-  {path:'package',component:PackagedashboardComponent},
-  {path:'reviewlist',component:ReviewlistComponent},
-  {path:'userrecord',component:UserrecordsComponent},
   {path:'djparty',component:DjpartyComponent},
   {path:'funclup',component:FunclupComponent},
   {path:'prewed',component:PrewedComponent},
   {path:'admin',component:AdminComponent},
   {path:'cdash',component:ContactdashboardComponent},
-  {path:'r1',component:Review1Component}
+  {path:'r1',component:Review1Component},
+  {path:'packdash',component:PackagedashComponent},
+  {path:'packdash1',component:Packagedash1Component},
+  {path:'eventupdate',component:EventupdateComponent},
+  {path:'eventupdate1',component:Eventupdate1Component},
+  {path:'imgupload',component:ImgdashComponent},
+  {path:'imgupload1',component:Imgdash1Component}
 ];
 
 @NgModule({
@@ -85,7 +87,6 @@ const routes: Routes = [
     ReviewComponent,
     ContactComponent,
     FooterComponent,
-    ThemeToggleComponent,
     PaymentComponent,
     VenueComponent,
     InvitationComponent,
@@ -95,20 +96,21 @@ const routes: Routes = [
     CustomfoodComponent,
     AnimationComponent,
     LoginformComponent,
-    RecordComponent,
     DisplayComponent,
     FeedbackComponent,
     Feedback1Component,
     DjpartyComponent,
     FunclupComponent,
     PrewedComponent,
-    EventdashboardComponent,
-    PackagedashboardComponent,
-    ReviewlistComponent,
-    UserrecordsComponent,
     AdminComponent,
     ContactdashboardComponent,
     Review1Component,
+    PackagedashComponent,
+    Packagedash1Component,
+    EventupdateComponent,
+    Eventupdate1Component,
+    ImgdashComponent,
+    Imgdash1Component,
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,

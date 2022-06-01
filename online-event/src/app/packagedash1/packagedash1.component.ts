@@ -5,16 +5,16 @@ import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 // import * as XLSX from 'xlsx';
 @Component({
-  selector: 'app-service',
-  templateUrl: './service.component.html',
-  styleUrls: ['./service.component.css']
+  selector: 'app-packagedash1',
+  templateUrl: './packagedash1.component.html',
+  styleUrls: ['./packagedash1.component.css']
 })
-export class ServiceComponent implements OnInit {
-  eForm: FormGroup;
+export class Packagedash1Component implements OnInit {
+  PackageForm: FormGroup;
   userRecord: any = {
-    ename: '',
-    ereview: '',
-    eamount: '',
+    event1: '',
+    amount1: '',
+    service1: '',
   };
   data: any;
   formGroup: any;
@@ -23,37 +23,47 @@ export class ServiceComponent implements OnInit {
   alluser: any;
   empRecord: any;
   constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
-   this.saving()
-
-    this.eForm = this.fb.group({
-      ename: [this.userRecord.ename],
-      ereview: [this.userRecord.ereview],
-      eamount: [this.userRecord.eamount],
+    this.saving( )
+    this.PackageForm = this.fb.group({
+      event1: [this.userRecord.event1],
+      amount1: [this.userRecord.amount1],
+      service1: [this.userRecord.service1],
     });
   }
 
   ngOnInit(): void {
   }
-  get ename() {
-    return this.eForm.get('ename')!;
+  get event1() {
+    return this.PackageForm.get('event1')!;
   }
-  get ereview() {
-    return this.eForm.get('ereview')!;
+  get amount1() {
+    return this.PackageForm.get('amount1')!;
   }
-  get eamount() {
-    return this.eForm.get('eamount')!;
+  get service1() {
+    return this.PackageForm.get('service1')!;
   }
 
-  saving( ) {
+  saving() {
     //   console.log("from form", Formvalue);
     //   this.api.storeData1(Formvalue).subscribe((data) => {
     //    console.log("data returned from server", data);
     //   })
     //  }
+    
+    // //angular to couch POST
+    //  this.api.add("online_management", formData).subscribe(res => {
+    //   console.log(res);
+    //   // alert("thanks to give your feedback!");
+    //   console.log('basco')
+    //   this.PackageForm.reset();
+    // }, rej => {
+    //   // alert("opps! Can not post data" + rej);
+    // });
 
+    
     let data = {
       selector: {
-        type: "eventupdate"
+        type: "package"
       },
       "sort": [
          {
@@ -62,21 +72,10 @@ export class ServiceComponent implements OnInit {
       ]
     }
     
-
-
-    // //angular to couch POST
-    //  this.api.add("online_management", formData).subscribe(res => {
-    //   console.log(res);
-    //   // alert("thanks to give your feedback!");
-    //   console.log('basco')
-    //   this.eForm.reset();
-    // }, rej => {
-    //   // alert("opps! Can not post data" + rej);
-    // });
     
     //get the all data
     this.api.get(data).subscribe(res => {
-      // this.router.navigate(['packdash1'])
+      this.router.navigate(['packdash1'])
       this.alluser=res;
       console.log(res);
       this.alluser = this.alluser.docs;
