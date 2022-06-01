@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 })
 export class LoginformComponent implements OnInit {
   loginForm!: FormGroup;
-
  
  constructor(private fb: FormBuilder, private apii: Apiservice1Service,private api: APIserviceService, private router:Router) {}
 
@@ -31,6 +30,12 @@ export class LoginformComponent implements OnInit {
  }
  
  saving(Formvalue: any) {
+
+  const login = {
+    userid: Formvalue.userid,
+    password: Formvalue.password,
+    type: "login",
+  }
   console.log("from form", Formvalue);
   this.api.storeData2(Formvalue).subscribe((data) => {
     if(data.docs.length > 0){

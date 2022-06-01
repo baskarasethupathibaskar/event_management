@@ -22,7 +22,7 @@ import { PhotosComponent } from './photos/photos.component';
 import { CustomfoodComponent } from './customfood/customfood.component';
 import { AnimationComponent } from './animation/animation.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginformComponent } from './loginform/loginform.component';
 import { DisplayComponent } from './display/display.component';
 import { FeedbackComponent } from './feedback/feedback.component';
@@ -39,6 +39,8 @@ import { EventupdateComponent } from './eventupdate/eventupdate.component';
 import { Eventupdate1Component } from './eventupdate1/eventupdate1.component';
 import { ImgdashComponent } from './imgdash/imgdash.component';
 import { Imgdash1Component } from './imgdash1/imgdash1.component';
+import { HttpCallInterceptor } from './interceptor';
+import { ToastrModule } from 'ngx-toastr';
 
 const routes: Routes = [
   {path:'venue',component:VenueComponent},
@@ -114,9 +116,16 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,
-    AppRoutingModule,RouterModule.forRoot(routes)
+    AppRoutingModule,RouterModule.forRoot(routes),
+    ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpCallInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
