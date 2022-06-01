@@ -4,8 +4,6 @@ import { APIserviceService } from '../apiservice.service';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 
-// import { basename } from 'path';
-// import { generateKeyPair } from 'crypto';
 
 @Component({
   selector: 'app-loginform',
@@ -42,7 +40,6 @@ export class LoginformComponent implements OnInit {
     }
    console.log("data returned from server", data);
   })
-  // alert('please enter your id & password')
  }
 }
 

@@ -63,21 +63,7 @@ export class ContactdashboardComponent implements OnInit {
   }
 
   saving( ) {
-    //   console.log("from form", Formvalue);
-    //   this.api.storeData1(Formvalue).subscribe((data) => {
-    //    console.log("data returned from server", data);
-    //   })
-    //  }
-    
-    // //angular to couch POST
-    //  this.api.add("online_management", formData).subscribe(res => {
-    //   console.log(res);
-    //   console.log('basco')
-    //   this.contactForm.reset();
-    // }, rej => {
-    //   // alert("opps! Can not post data" + rej);
-    // });
-    
+   
      let data = {
       selector: {
         type: "event"
@@ -92,30 +78,16 @@ export class ContactdashboardComponent implements OnInit {
     //get the all data
     this.api.get(data).subscribe(res => {
       this.alluser=res;
-      console.log(res);
       this.alluser = this.alluser.docs;
       this.alluserData = this.alluser
-      // .map((el: any)=>el.doc);
       console.log(this.alluserData[0]);
       for (const array in this.alluserData) {
         console.log(this.alluserData[array])
       }
-      // alert("Your data was get successfully!");
       this.empRecord.reset();
     }, rej => {
-      // alert("opps! Can not post data" + rej);
     });
     
-    // // get the data by using particular id
-    // this.api.getDocsByID("online_management","ecb83221a3496d8815d5c195441742ac").subscribe(res => {
-    //   //  console.log(res);
-    //    var temp=res;
-    //    console.log(temp);
-    //   //  alert("One ID got from database");
-    //    this.empRecord.reset();
-    //  },rej=>{
-    //   //  alert("404"+rej);
-    //  });
     
     }
     }
