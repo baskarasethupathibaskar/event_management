@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormBuilder, NgForm ,Validators} from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -28,13 +29,13 @@ export class ContactComponent implements OnInit {
   alluser: any;
   empRecord: any;
 
-  constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
+  constructor(private toast:ToastrService,private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
 
     this.contactForm = this.fb.group({
-      name:['',Validators.required],
-      email:['',Validators.required],
-      mobile:['',Validators.required],
-      adhar:['',Validators.required],
+      name:['',[Validators.required,Validators.minLength(3)]],
+      email:['',[Validators.required,Validators.email]],
+      mobile:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
+      adhar:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],
       address:['',Validators.required],
 
     });
@@ -78,6 +79,7 @@ export class ContactComponent implements OnInit {
       this.contactForm.reset();
     }, rej => {
     });
+    this.toast.success('data send to admin successfully');
     
     }
     }

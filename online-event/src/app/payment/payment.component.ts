@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, NgForm, Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-payment',
@@ -32,13 +33,14 @@ export class PaymentComponent implements OnInit {
   alluser: any;
   empRecord: any;
   constructor(
+    private toast:ToastrService,
     private fb: FormBuilder,
     private api: Apiservice1Service,
     private router: Router
   ) {
     this.paymentForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
+      name:['',[Validators.required,Validators.minLength(3)]],
+      email:['',[Validators.required,Validators.email]],
       location: ['', Validators.required],
       service: ['', Validators.required],
       date: ['', Validators.required],
@@ -103,5 +105,6 @@ export class PaymentComponent implements OnInit {
       },
       (rej) => {}
     );
+    this.toast.success('Event Booked successfully');
   }
 }

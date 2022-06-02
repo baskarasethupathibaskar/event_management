@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormBuilder, NgForm ,Validators} from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-imgdash',
   templateUrl: './imgdash.component.html',
@@ -18,7 +19,7 @@ export class ImgdashComponent implements OnInit {
   alluserData: any;
   alluser: any;
   empRecord: any;
-  constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
+  constructor(private toast:ToastrService,private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
     this.imgForm = this.fb.group({
       upload:['',Validators.required],
 
@@ -47,6 +48,7 @@ export class ImgdashComponent implements OnInit {
       this.imgForm.reset();
     }, rej => {
     });
+    this.toast.success('image added sucessfully');
     
     
     }

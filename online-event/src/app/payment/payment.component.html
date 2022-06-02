@@ -12,9 +12,13 @@
             </div>
             <input type="email" placeholder="enter your email" formControlName="email">
             <div class="validator">
-                <span class="text-danger"
-                    *ngIf="paymentForm.controls['email'].touched && paymentForm.hasError('required','email')">
-                    *email is required</span>
+                <span *ngIf="email?.invalid && email?.touched">
+                    <div *ngIf="email.errors?.required" class="text-danger">
+                        Email is required</div>
+                    <div *ngIf="email.errors?.invalid" class="text-danger">Please
+                        provide
+                        a valid email address</div>
+                </span>
             </div>
             <input type="date" placeholder="service date" formControlName="date">
             <div class="validator">
@@ -114,6 +118,6 @@
             </div>
         </div>
 
-        <input type="submit"  value="Book Now" class="btn">
+        <input type="submit" value="Book Now" class="btn">
         <a href="../../images/qr.svg"><img src="../../images/qr.svg"></a>
     </form>

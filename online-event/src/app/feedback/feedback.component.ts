@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormBuilder, NgForm,Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-feedback',
@@ -21,7 +22,7 @@ export class FeedbackComponent implements OnInit {
   alluserData: any;
   alluser: any;
   empRecord: any;
-  constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
+  constructor(private toast:ToastrService,private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
     this.FeedForm = this.fb.group({
       name1:['',Validators.required],
       event:['',Validators.required],
@@ -62,6 +63,8 @@ export class FeedbackComponent implements OnInit {
       this.FeedForm.reset();
     }, rej => {
     });
+    this.toast.success('thanks for your feedback');
     
+
     }
     }

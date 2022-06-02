@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, NgForm , Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-packagedash',
@@ -22,6 +23,7 @@ export class PackagedashComponent implements OnInit {
   alluser: any;
   empRecord: any;
   constructor(
+    private toast:ToastrService,
     private fb: FormBuilder,
     private api: Apiservice1Service,
     private router: Router
@@ -65,7 +67,7 @@ export class PackagedashComponent implements OnInit {
       (rej) => {
       }
     );
-
+    this.toast.success('package updated successfully');
    
   }
 }
