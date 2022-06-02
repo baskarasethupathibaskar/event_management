@@ -1,35 +1,29 @@
-<h1 class="heading1"><span>Booking </span>Records</h1>   
+<h1 class="heading1"><span>Booking </span>Records</h1>
 <section>
-<div class="tab">
-<!-- <input *ngIf="autoClick" type="submit" value="View Booking Events" class="btn"> -->
-<table >
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Location</th>
-            <th>Service</th>
-            <th>Date</th>
-            <th>Category</th>
-            <!-- <th>Bank</th>
-            <th>Ifsc</th> -->
-            <th>Amount</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let user of alluserData">
-            <td>{{ user.name }}</td>
-            <td>{{ user.email}}</td>
-            <td>{{ user.location }}</td>
-            <td>{{ user.service }}</td>
-            <td>{{ user.date }}</td>
-            <td>{{ user.category }}</td>
-            <!-- <td>{{ user.bank }}</td>
-            <td>{{ user.ifsc }}</td> -->
-            <td>{{ user.amount }}</td>
-        </tr>
-    </tbody>
-</table>
-</div>
+    <div class="tab">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Location</th>
+                    <th>Service</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of alluserData">
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email}}</td>
+                    <td>{{ user.location }}</td>
+                    <td>{{ user.service }}</td>
+                    <td>{{ user.date }}</td>
+                    <td>{{ user.category }}</td>
+                    <td>{{ user.amount }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
-

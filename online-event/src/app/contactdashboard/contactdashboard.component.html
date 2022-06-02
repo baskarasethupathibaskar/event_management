@@ -1,29 +1,25 @@
-
 <h1 class="heading1"><span>User</span>Records</h1>
-
 <section>
     <div class="tab">
-    <table >
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Mobile</th>
-                <th>Adhar</th>
-                <th>Address</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let user of alluserData">
-                <td>{{ user.name }}</td>
-                <td>{{ user.email}}</td>
-                <td>{{ user.mobile }}</td>
-                <td>{{ user.adhar }}</td>
-                <td>{{ user.address }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Adhar</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of alluserData">
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.email}}</td>
+                    <td>{{ user.mobile }}</td>
+                    <td>{{ user.adhar }}</td>
+                    <td>{{ user.address }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    </section>
-    
-    
+</section>
