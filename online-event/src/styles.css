@@ -525,6 +525,10 @@ background: linear-gradient(90deg, rgba(233,233,236,1) 0%, rgb(13, 13, 14) 100%)
     font-size: 3rem;
 }
 
+caption {
+    display: none;
+}
+
 @keyframes spin {
     
     0%{
