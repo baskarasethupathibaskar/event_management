@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, NgForm , Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, NgForm, Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -23,7 +23,7 @@ export class PackagedashComponent implements OnInit {
   alluser: any;
   empRecord: any;
   constructor(
-    private toast:ToastrService,
+    private toast: ToastrService,
     private fb: FormBuilder,
     private api: Apiservice1Service,
     private router: Router
@@ -47,27 +47,26 @@ export class PackagedashComponent implements OnInit {
   }
 
   saving(Formvalue: any) {
-    
     const d = new Date();
     const package1 = {
       event1: Formvalue.event1,
       service1: Formvalue.service1,
       amount1: Formvalue.amount1,
       type: 'package',
-      createdBy:d
+      createdBy: d,
     };
 
     //angular to couch POST
     this.api.add('online_management', package1).subscribe(
-      (res) => {
+      (_res) => {
+        this.toast.success('package updated successfully');
         this.router.navigate(['packdash1']);
         console.log('basco');
         this.PackageForm.reset();
       },
-      (rej) => {
+      (_rej) => {
+        this.toast.error('package failed to update');
       }
     );
-    this.toast.success('package updated successfully');
-   
   }
 }

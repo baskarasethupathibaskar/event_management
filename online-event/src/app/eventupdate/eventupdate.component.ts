@@ -22,7 +22,7 @@ export class EventupdateComponent implements OnInit {
   alluser: any;
   empRecord: any;
   constructor(
-    private toast:ToastrService,
+    private toast: ToastrService,
     private fb: FormBuilder,
     private api: Apiservice1Service,
     private router: Router
@@ -46,7 +46,6 @@ export class EventupdateComponent implements OnInit {
   }
 
   saving(Formvalue: any) {
-    
     const d = new Date();
     const event1 = {
       ename: Formvalue.ename,
@@ -58,12 +57,13 @@ export class EventupdateComponent implements OnInit {
 
     //angular to couch POST
     this.api.add('online_management', event1).subscribe(
-      (res) => {
+      (_res) => {
+        this.toast.success('event updated successfully');
         this.eForm.reset();
       },
-      (rej) => {
+      (_rej) => {
+        this.toast.error('event failed to update');
       }
     );
-    this.toast.success('event updated successfully');
   }
 }

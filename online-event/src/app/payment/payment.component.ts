@@ -33,14 +33,14 @@ export class PaymentComponent implements OnInit {
   alluser: any;
   empRecord: any;
   constructor(
-    private toast:ToastrService,
+    private toast: ToastrService,
     private fb: FormBuilder,
     private api: Apiservice1Service,
     private router: Router
   ) {
     this.paymentForm = this.fb.group({
-      name:['',[Validators.required,Validators.minLength(3)]],
-      email:['',[Validators.required,Validators.email]],
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
       location: ['', Validators.required],
       service: ['', Validators.required],
       date: ['', Validators.required],
@@ -100,11 +100,13 @@ export class PaymentComponent implements OnInit {
 
     //angular to couch POST
     this.api.add('online_management', payment).subscribe(
-      (res) => {
+      (_res) => {
+        this.toast.success('Event Booked successfully');
         this.paymentForm.reset();
       },
-      (rej) => {}
+      (_rej) => {
+        this.toast.error('Event Failed to booked');
+      }
     );
-    this.toast.success('Event Booked successfully');
   }
 }
