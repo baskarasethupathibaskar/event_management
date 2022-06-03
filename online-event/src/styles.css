@@ -15,7 +15,6 @@
     outline: none;
     padding:0;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
     
     margin:0;
@@ -55,13 +54,11 @@ background: linear-gradient(90deg, rgba(233,233,236,1) 0%, rgb(13, 13, 14) 100%)
     font-size: 4rem;
     padding-bottom: 2rem;
     text-align: center;
-    text-transform: uppercase;
 }
 
 .heading span{
     color:var(--main-color);
     font-weight: 900;
-    text-transform: uppercase;
 }
 
 
@@ -133,12 +130,10 @@ background: linear-gradient(90deg, rgba(233,233,236,1) 0%, rgb(13, 13, 14) 100%)
 .home .content h3{
     color:#fff;
     font-size: 4.5rem;
-    text-transform: uppercase;
 }
 
 .home .content h3 span{
     color:var(--main-color);
-    text-transform: uppercase;
 }
 
 .home .home-slider .swiper-slide{
@@ -404,14 +399,12 @@ background: linear-gradient(90deg, rgba(233,233,236,1) 0%, rgb(13, 13, 14) 100%)
     font-size: 1.5rem;
     margin:.7rem 0;
     padding:1rem;
-    text-transform: none;
     width: 100%;
 }
 
 .contact form .inputBox input::placeholder,
 .contact form textarea::placeholder{
     color:#eee;
-    text-transform: capitalize;
 }
 
 .contact form .inputBox input:focus,

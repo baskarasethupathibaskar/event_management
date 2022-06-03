@@ -10,7 +10,7 @@
                     *ngIf="contactForm.controls['name'].touched && contactForm.hasError('required','name')">
                     *name is required</span>
             </div>
-            <input type="text" placeholder="email" formControlName="email">
+            <input type="email" placeholder="email" formControlName="email">
             <div class="validator">
                     <span *ngIf="email?.invalid && email?.touched">
                         <div *ngIf="email.errors?.required" class="text-danger">
