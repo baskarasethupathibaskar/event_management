@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormBuilder, NgForm } from '@angular/forms';
+import { FormGroup,FormBuilder} from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 
@@ -31,6 +31,8 @@ export class Feedback1Component implements OnInit {
   }
 
   ngOnInit(): void {
+    // TODO document why this method 'ngOnInit' is empty
+  
   }
   get name1() {
     return this.FeedForm.get('name1')!;
@@ -68,7 +70,9 @@ export class Feedback1Component implements OnInit {
         console.log(this.alluserData[array])
       }
       this.empRecord.reset();
-    }, rej => {
+    }, _rej => {
+      // TODO document why this arrow function is empty
+    
     });
     
     

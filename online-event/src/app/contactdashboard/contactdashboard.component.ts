@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormBuilder, NgForm } from '@angular/forms';
+import { FormGroup,FormBuilder} from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
-// import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-// import * as XLSX from 'xlsx';
 @Component({
   selector: 'app-contactdashboard',
   templateUrl: './contactdashboard.component.html',
@@ -85,7 +83,9 @@ export class ContactdashboardComponent implements OnInit {
         console.log(this.alluserData[array])
       }
       this.empRecord.reset();
-    }, rej => {
+    }, _rej => {
+      // TODO document why this arrow function is empty
+    
     });
     
     

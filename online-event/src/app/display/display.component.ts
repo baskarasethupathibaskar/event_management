@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormBuilder, NgForm } from '@angular/forms';
+import { FormGroup,FormBuilder} from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
-import { TypeofExpr } from '@angular/compiler';
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
@@ -103,7 +102,9 @@ this.api.get(data).subscribe(res => {
     console.log(this.alluserData[array])
   }
   this.empRecord.reset();
-}, rej => {
+}, _rej => {
+  // TODO document why this arrow function is empty
+
 });
 
 }

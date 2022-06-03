@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
   constructor(public apii:Apiservice1Service) { }
 
   ngOnInit(): void {
+    // TODO document why this method 'ngOnInit' is empty
+  
   }
 
 }
