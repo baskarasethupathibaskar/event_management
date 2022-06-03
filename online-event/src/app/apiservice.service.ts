@@ -5,11 +5,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class APIserviceService {
-  add(arg0: string, login: { userid: any; password: any; type: string; }) {
-    throw new Error('Method not implemented.');
-  }
-  
- 
   constructor(private http: HttpClient) { }
 
   storeData(formData: any) {

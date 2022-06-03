@@ -12,7 +12,7 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.post("/postdata", function (req, res) {
+app.post("/postdata", function (req) {
   var objectnew = {
     name: req.body.name,
     email: req.body.email,
@@ -26,11 +26,7 @@ app.post("/postdata", function (req, res) {
   });
 });
 
-// app.post("/getDetails",function(req,res){
-//   dbconnection.
-// })
-
-app.post("/postdata1", function (req, res) {
+app.post("/postdata1", function (req) {
   var objectnew1 = {
     name: req.body.name,
     email: req.body.email,
@@ -55,7 +51,6 @@ app.post("/postdata2", function (req, res) {
     password: req.body.password,
     type:"login"
   };
-  // console.log("data from angular", objectnew2);
   const fetchData ={
     "selector" :{
       userid :objectnew2.userid,
@@ -70,7 +65,7 @@ app.post("/postdata2", function (req, res) {
 });
 
 
-app.post("/postdata4", function (req, res) {
+app.post("/postdata4", function (req) {
   var objectnew3 = {
     name: req.body.name,
     email: req.body.email,
