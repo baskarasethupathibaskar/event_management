@@ -2,7 +2,7 @@
 
     <a href="#" class="logo"><span>online </span>Event</a>
 
-    <nav class="navbar" *ngIf="this.apii.show">
+    <nav class="navbar" aria-label="show" *ngIf="this.apii.show">
         <a href="home">home</a>
         <a href="service">Event</a>
         <a href="about">about</a>
@@ -13,7 +13,7 @@
         <a href="login" *ngIf="this.apii.show">ADMIN</a>
     </nav>
 
-    <nav class="navbar" *ngIf="this.apii.loginshow">
+    <nav class="navbar" aria-label="hide" *ngIf="this.apii.loginshow">
         <a href="home">home</a>
         <a href="service">Event</a>
         <a href="about">about</a>
