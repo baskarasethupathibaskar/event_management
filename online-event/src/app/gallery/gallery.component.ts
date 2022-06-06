@@ -59,9 +59,6 @@ export class GalleryComponent implements OnInit {
         console.log(this.alluserData[array])
       }
       this.empRecord.reset();
-    }, _rej => {
-      // TODO document why this arrow function is empty
-    
     });
     
     }
