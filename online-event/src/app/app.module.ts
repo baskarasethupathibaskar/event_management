@@ -14,12 +14,6 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PaymentComponent } from './payment/payment.component';
-import { VenueComponent } from './venue/venue.component';
-import { InvitationComponent } from './invitation/invitation.component';
-import { EntertainmentComponent } from './entertainment/entertainment.component';
-import { FoodComponent } from './food/food.component';
-import { PhotosComponent } from './photos/photos.component';
-import { CustomfoodComponent } from './customfood/customfood.component';
 import { AnimationComponent } from './animation/animation.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -28,8 +22,6 @@ import { DisplayComponent } from './display/display.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { Feedback1Component } from './feedback1/feedback1.component';
 import { DjpartyComponent } from './djparty/djparty.component';
-import { FunclupComponent } from './funclup/funclup.component';
-import { PrewedComponent } from './prewed/prewed.component';
 import { AdminComponent } from './admin/admin.component';
 import { ContactdashboardComponent } from './contactdashboard/contactdashboard.component';
 import { Review1Component } from './review1/review1.component';
@@ -43,14 +35,8 @@ import { HttpCallInterceptor } from './interceptor';
 import { ToastrModule } from 'ngx-toastr';
 
 const routes: Routes = [
-  {path:'venue',component:VenueComponent},
   {path:'display',component:DisplayComponent},
   {path:'anim',component:AnimationComponent},
-  {path:'entertainment',component:EntertainmentComponent},
-  {path:'foods',component:FoodComponent},
-  {path:'customfood',component:CustomfoodComponent},
-  {path:'invitation',component:InvitationComponent},
-  {path:'photos',component:PhotosComponent},
   {path:'service',component:ServiceComponent},
   {path:'pay',component:PaymentComponent},
   {path:'home',component:HomeComponent},
@@ -64,8 +50,6 @@ const routes: Routes = [
   {path:'feedback',component:FeedbackComponent},
   {path:'feedback1',component:Feedback1Component},
   {path:'djparty',component:DjpartyComponent},
-  {path:'funclup',component:FunclupComponent},
-  {path:'prewed',component:PrewedComponent},
   {path:'admin',component:AdminComponent},
   {path:'cdash',component:ContactdashboardComponent},
   {path:'r1',component:Review1Component},
@@ -90,20 +74,12 @@ const routes: Routes = [
     ContactComponent,
     FooterComponent,
     PaymentComponent,
-    VenueComponent,
-    InvitationComponent,
-    EntertainmentComponent,
-    FoodComponent,
-    PhotosComponent,
-    CustomfoodComponent,
     AnimationComponent,
     LoginformComponent,
     DisplayComponent,
     FeedbackComponent,
     Feedback1Component,
     DjpartyComponent,
-    FunclupComponent,
-    PrewedComponent,
     AdminComponent,
     ContactdashboardComponent,
     Review1Component,
