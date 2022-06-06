@@ -13,7 +13,7 @@ app1.use(
 app1.use(bodyParser.json());
 
 app1.post("/postdata", function (req) {
-  var objectnew = {
+  const objectnew = {
     name: req.body.name,
     email: req.body.email,
     mobile: req.body.mobile,
@@ -27,7 +27,7 @@ app1.post("/postdata", function (req) {
 });
 
 app1.post("/postdata1", function (req) {
-  var objectnew1 = {
+  const objectnew1 = {
     name: req.body.name,
     email: req.body.email,
     location: req.body.location,
@@ -46,7 +46,7 @@ app1.post("/postdata1", function (req) {
 });
 
 app1.post("/postdata2", function (req, res) {
-  var objectnew2 = {
+  const objectnew2 = {
     userid: req.body.userid,
     password: req.body.password,
     type:"login"
@@ -66,7 +66,7 @@ app1.post("/postdata2", function (req, res) {
 
 
 app1.post("/postdata4", function (req) {
-  var objectnew3 = {
+  const objectnew3 = {
     name: req.body.name,
     email: req.body.email,
     location: req.body.location,

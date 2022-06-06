@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient , HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { HttpHeaders } from '@angular/common/http';
 
 
 @Injectable({
@@ -24,18 +23,11 @@ export class Apiservice1Service {
   };
 
   add(db: string, doc: object): Observable<{}> {
-    // const url2 = `${this.url}${db}`;
     const url = this.url + db;
     return this.http.post(url, doc, this.httpOptions)
   }
-  // get(db: string): Observable<{}> {
-  //   const url = this.url + db + '/_all_docs?include_docs=true';
-  //   return this.http.get(url, this.httpOptions)
-
-  // }
-
+ 
   get(data:any): Observable<{}> {
-    // const url = this.url + db + '/_all_docs?include_docs=true';
     const url = this.url +'online_management/_find';
     return this.http.post( url,data, this.httpOptions)
 
