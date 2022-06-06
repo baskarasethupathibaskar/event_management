@@ -29,11 +29,11 @@ export class Feedback1Component implements OnInit {
       comment: [this.userRecord.comment],
     });
   }
-
   ngOnInit(): void {
-    // TODO document why this method 'ngOnInit' is empty
-  
+    throw new Error('Method not implemented.');
   }
+
+ 
   get name1() {
     return this.FeedForm.get('name1')!;
   }
@@ -70,9 +70,6 @@ export class Feedback1Component implements OnInit {
         console.log(this.alluserData[array])
       }
       this.empRecord.reset();
-    }, _rej => {
-      // TODO document why this arrow function is empty
-    
     });
     
     

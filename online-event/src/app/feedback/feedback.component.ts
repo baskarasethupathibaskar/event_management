@@ -34,8 +34,10 @@ export class FeedbackComponent implements OnInit {
       comment: ['', Validators.required],
     });
   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
-  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */ }
   get name1() {
     return this.FeedForm.get('name1')!;
   }

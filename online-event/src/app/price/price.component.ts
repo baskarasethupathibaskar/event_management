@@ -28,11 +28,11 @@ export class PriceComponent implements OnInit {
       service1: [this.userRecord.service1],
     });
   }
-
   ngOnInit(): void {
-    // TODO document why this method 'ngOnInit' is empty
-  
+    throw new Error('Method not implemented.');
   }
+
+  
   get event1() {
     return this.PackageForm.get('event1')!;
   }
@@ -63,9 +63,6 @@ export class PriceComponent implements OnInit {
         console.log(this.alluserData[array])
       }
       this.empRecord.reset();
-    }, _rej => {
-      // TODO document why this arrow function is empty
-    
     });
     
     }

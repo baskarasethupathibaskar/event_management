@@ -29,11 +29,11 @@ export class Eventupdate1Component implements OnInit {
       eamount: [this.userRecord.eamount],
     });
   }
-
   ngOnInit(): void {
-    // TODO document why this method 'ngOnInit' is empty
-  
+    throw new Error('Method not implemented.');
   }
+
+  
   get ename() {
     return this.eForm.get('ename')!;
   }
@@ -69,9 +69,6 @@ export class Eventupdate1Component implements OnInit {
         console.log(this.alluserData[array])
       }
       this.empRecord.reset();
-    }, _rej => {
-      // TODO document why this arrow function is empty
-    
     });
     
     

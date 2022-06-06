@@ -24,11 +24,11 @@ export class Imgdash1Component implements OnInit {
       upload: [this.userRecord.upload],
     });
   }
-
   ngOnInit(): void {
-    // TODO document why this method 'ngOnInit' is empty
-  
+    throw new Error('Method not implemented.');
   }
+
+  
   get upload() {
     return this.imgForm.get('upload')!;
   }

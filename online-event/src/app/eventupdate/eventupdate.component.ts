@@ -33,8 +33,10 @@ export class EventupdateComponent implements OnInit {
       eamount: ['', Validators.required],
     });
   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
-  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */ }
   get ename() {
     return this.eForm.get('ename')!;
   }

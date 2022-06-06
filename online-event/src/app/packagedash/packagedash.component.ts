@@ -34,8 +34,10 @@ export class PackagedashComponent implements OnInit {
       service1: ['', Validators.required],
     });
   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
-  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */ }
   get event1() {
     return this.PackageForm.get('event1')!;
   }

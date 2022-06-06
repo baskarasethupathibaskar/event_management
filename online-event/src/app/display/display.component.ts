@@ -50,7 +50,7 @@ export class DisplayComponent implements OnInit {
  }
 
  ngOnInit(): void {
-   console.log("pyment compnent is working")
+   console.log("payment component is working")
  }
  get name() {
   return this.paymentForm.get('name')!;
@@ -102,9 +102,6 @@ this.api.get(data).subscribe(res => {
     console.log(this.alluserData[array])
   }
   this.empRecord.reset();
-}, _rej => {
-  // TODO document why this arrow function is empty
-
 });
 
 }

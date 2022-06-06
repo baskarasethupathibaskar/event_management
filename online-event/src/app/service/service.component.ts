@@ -29,11 +29,11 @@ export class ServiceComponent implements OnInit {
       eamount: [this.userRecord.eamount],
     });
   }
-
   ngOnInit(): void {
-    // TODO document why this method 'ngOnInit' is empty
-  
+    throw new Error('Method not implemented.');
   }
+
+  
   get ename() {
     return this.eForm.get('ename')!;
   }

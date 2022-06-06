@@ -29,8 +29,10 @@ export class ImgdashComponent implements OnInit {
       upload: ['', Validators.required],
     });
   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
-  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */ }
   get upload() {
     return this.imgForm.get('upload')!;
   }

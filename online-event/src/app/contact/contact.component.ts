@@ -56,10 +56,11 @@ export class ContactComponent implements OnInit {
       address: ['', Validators.required],
     });
   }
-
   ngOnInit(): void {
-    // TODO document why this method 'ngOnInit' is empty
+    throw new Error('Method not implemented.');
   }
+
+ 
   get name() {
     return this.contactForm.get('name')!;
   }
@@ -95,7 +96,6 @@ export class ContactComponent implements OnInit {
         this.contactForm.reset();
       },
       (_rej) => {
-        // TODO document why this arrow function is empty
         this.toast.error('data Failed to send');
       }
     );
