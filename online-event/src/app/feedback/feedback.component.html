@@ -2,18 +2,18 @@
 
     <h1 class="heading"> <span>Feedback</span> Form </h1>
 
-    <form [formGroup]="FeedForm" (ngSubmit)="saving(this.FeedForm.value)">
+    <form [formGroup]="feedForm" (ngSubmit)="saving(this.feedForm.value)">
         <div class="inputBox">
             <input type="text" placeholder="enter your name" formControlName="name1">
             <div class="validator">
                 <span class="text-danger"
-                    *ngIf="FeedForm.controls['name1'].touched && FeedForm.hasError('required','name1')">
+                    *ngIf="feedForm.controls['name1'].touched && feedForm.hasError('required','name1')">
                     *event name is required</span>
             </div>
             <input type="text" placeholder="event name" formControlName="event">
             <div class="validator">
                 <span class="text-danger"
-                    *ngIf="FeedForm.controls['event'].touched && FeedForm.hasError('required','event')">
+                    *ngIf="feedForm.controls['event'].touched && feedForm.hasError('required','event')">
                     *event name is required</span>
             </div>
         </div>
@@ -21,7 +21,7 @@
         <textarea name="" placeholder="your comments" id="" cols="30" rows="10" formControlName="comment"></textarea>
         <div class="validator">
             <span class="text-danger"
-                *ngIf="FeedForm.controls['comment'].touched && FeedForm.hasError('required','comment')">
+                *ngIf="feedForm.controls['comment'].touched && feedForm.hasError('required','comment')">
                 *event name is required</span>
         </div>
         <input type="submit" value="Enter Your Feedback" class="btn">

@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./packagedash.component.css'],
 })
 export class PackagedashComponent implements OnInit {
-  PackageForm: FormGroup;
+  packageForm: FormGroup;
   userRecord: any = {
     event1: '',
     amount1: '',
@@ -28,7 +28,7 @@ export class PackagedashComponent implements OnInit {
     private api: Apiservice1Service,
     private router: Router
   ) {
-    this.PackageForm = this.fb.group({
+    this.packageForm = this.fb.group({
       event1: ['', Validators.required],
       amount1: ['', Validators.required],
       service1: ['', Validators.required],
@@ -39,13 +39,13 @@ export class PackagedashComponent implements OnInit {
   }
 
   get event1() {
-    return this.PackageForm.get('event1')!;
+    return this.packageForm.get('event1')!;
   }
   get amount1() {
-    return this.PackageForm.get('amount1')!;
+    return this.packageForm.get('amount1')!;
   }
   get service1() {
-    return this.PackageForm.get('service1')!;
+    return this.packageForm.get('service1')!;
   }
 
   saving(Formvalue: any) {
@@ -64,7 +64,7 @@ export class PackagedashComponent implements OnInit {
         this.toast.success('package updated successfully');
         this.router.navigate(['packdash1']);
         console.log('basco');
-        this.PackageForm.reset();
+        this.packageForm.reset();
       },
       (_rej) => {
         this.toast.error('package failed to update');

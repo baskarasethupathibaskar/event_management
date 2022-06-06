@@ -47,12 +47,12 @@ export class EventupdateComponent implements OnInit {
     return this.eForm.get('eamount')!;
   }
 
-  saving(Formvalue: any) {
+  saving(formValue: any) {
     const d = new Date();
     const event1 = {
-      ename: Formvalue.ename,
-      ereview: Formvalue.ereview,
-      eamount: Formvalue.eamount,
+      ename: formValue.ename,
+      ereview: formValue.ereview,
+      eamount: formValue.eamount,
       type: 'eventupdate',
       createdBy: d,
     };

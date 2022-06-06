@@ -10,7 +10,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./feedback.component.css'],
 })
 export class FeedbackComponent implements OnInit {
-  FeedForm: FormGroup;
+  feedForm: FormGroup;
   userRecord: any = {
     name1: '',
     event: '',
@@ -28,7 +28,7 @@ export class FeedbackComponent implements OnInit {
     private api: Apiservice1Service,
     private router: Router
   ) {
-    this.FeedForm = this.fb.group({
+    this.feedForm = this.fb.group({
       name1: ['', Validators.required],
       event: ['', Validators.required],
       comment: ['', Validators.required],
@@ -39,13 +39,13 @@ export class FeedbackComponent implements OnInit {
   }
 
   get name1() {
-    return this.FeedForm.get('name1')!;
+    return this.feedForm.get('name1')!;
   }
   get event() {
-    return this.FeedForm.get('event')!;
+    return this.feedForm.get('event')!;
   }
   get comment() {
-    return this.FeedForm.get('comment')!;
+    return this.feedForm.get('comment')!;
   }
 
   saving(Formvalue: any) {
@@ -62,7 +62,7 @@ export class FeedbackComponent implements OnInit {
     this.api.add('online_management', feed).subscribe(
       (_res) => {
         this.toast.success('thanks for your feedback');
-        this.FeedForm.reset();
+        this.feedForm.reset();
       },
       (_rej) => {
         this.toast.error('feedback failed to send');

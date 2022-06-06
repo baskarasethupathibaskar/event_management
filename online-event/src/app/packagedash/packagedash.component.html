@@ -2,18 +2,18 @@
 
     <h1 class="heading"> <span>Package</span> Add </h1>
 
-    <form [formGroup]="PackageForm" (ngSubmit)="saving(this.PackageForm.value)">
+    <form [formGroup]="packageForm" (ngSubmit)="saving(this.packageForm.value)">
         <div class="inputBox">
             <input type="text" placeholder="event name" formControlName="event1">
             <div class="validator">
                 <span class="text-danger"
-                    *ngIf="PackageForm.controls['event1'].touched && PackageForm.hasError('required','event1')">
+                    *ngIf="packageForm.controls['event1'].touched && packageForm.hasError('required','event1')">
                     *event is required</span>
             </div>
             <input type="text" placeholder="amount" formControlName="amount1">
             <div class="validator">
                 <span class="text-danger"
-                    *ngIf="PackageForm.controls['amount1'].touched && PackageForm.hasError('required','amount1')">
+                    *ngIf="packageForm.controls['amount1'].touched && packageForm.hasError('required','amount1')">
                     *amount is required</span>
             </div>
         </div>

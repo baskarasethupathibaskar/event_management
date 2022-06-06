@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./price.component.css']
 })
 export class PriceComponent implements OnInit {
-  PackageForm: FormGroup;
+  packageForm: FormGroup;
   userRecord: any = {
     event1: '',
     amount1: '',
@@ -22,7 +22,7 @@ export class PriceComponent implements OnInit {
   empRecord: any;
   constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
     this.saving( )
-    this.PackageForm = this.fb.group({
+    this.packageForm = this.fb.group({
       event1: [this.userRecord.event1],
       amount1: [this.userRecord.amount1],
       service1: [this.userRecord.service1],
@@ -34,13 +34,13 @@ export class PriceComponent implements OnInit {
 
   
   get event1() {
-    return this.PackageForm.get('event1')!;
+    return this.packageForm.get('event1')!;
   }
   get amount1() {
-    return this.PackageForm.get('amount1')!;
+    return this.packageForm.get('amount1')!;
   }
   get service1() {
-    return this.PackageForm.get('service1')!;
+    return this.packageForm.get('service1')!;
   }
 
   saving() {

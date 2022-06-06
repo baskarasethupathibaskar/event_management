@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class Apiservice1Service {
-  loginshow:boolean=false;
+  loginShow:boolean=false;
   show:boolean=true;
 
   url='https://97233c10-e8bd-4684-98ca-20e5eaf8dd35-bluemix.cloudantnosqldb.appdomain.cloud/'
@@ -42,7 +42,7 @@ export class Apiservice1Service {
     return this.http.delete(urld, this.httpOptions);
   }
   showoff(){
-    this.loginshow=!this.loginshow;
+    this.loginShow=!this.loginShow;
   
     this.show=!this.show;
     console.log(this.show)
