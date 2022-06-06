@@ -24,7 +24,6 @@ import { Feedback1Component } from './feedback1/feedback1.component';
 import { DjpartyComponent } from './djparty/djparty.component';
 import { AdminComponent } from './admin/admin.component';
 import { ContactdashboardComponent } from './contactdashboard/contactdashboard.component';
-import { Review1Component } from './review1/review1.component';
 import { PackagedashComponent } from './packagedash/packagedash.component';
 import { Packagedash1Component } from './packagedash1/packagedash1.component';
 import { EventupdateComponent } from './eventupdate/eventupdate.component';
@@ -52,7 +51,6 @@ const routes: Routes = [
   {path:'djparty',component:DjpartyComponent},
   {path:'admin',component:AdminComponent},
   {path:'cdash',component:ContactdashboardComponent},
-  {path:'r1',component:Review1Component},
   {path:'packdash',component:PackagedashComponent},
   {path:'packdash1',component:Packagedash1Component},
   {path:'eventupdate',component:EventupdateComponent},
@@ -82,7 +80,6 @@ const routes: Routes = [
     DjpartyComponent,
     AdminComponent,
     ContactdashboardComponent,
-    Review1Component,
     PackagedashComponent,
     Packagedash1Component,
     EventupdateComponent,
