@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder} from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
-import { Router } from '@angular/router';
 @Component({
   selector: 'app-contactdashboard',
   templateUrl: './contactdashboard.component.html',
@@ -16,7 +14,7 @@ export class ContactdashboardComponent implements OnInit {
   alluser: any;
   empRecord: any;
 
-  constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
+  constructor(private api: Apiservice1Service) {
     this.saving( )
   }
 

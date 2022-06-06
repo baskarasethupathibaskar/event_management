@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder} from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 @Component({
@@ -15,7 +14,7 @@ export class Packagedash1Component implements OnInit {
   alluserData: any;
   alluser: any;
   empRecord: any;
-  constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
+  constructor(private api: Apiservice1Service, private router:Router) {
     this.saving( )
     
   }
