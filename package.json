@@ -25,6 +25,7 @@
     "angular-validation": "^1.4.5",
     "bootstrap": "^5.1.3",
     "fb-ts": "^3.0.4",
+    "helmet": "^5.1.0",
     "ngx-light-carousel": "^1.1.16",
     "ngx-toastr": "^13.2.1"
   }
