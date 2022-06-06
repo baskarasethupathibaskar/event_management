@@ -8,21 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
-  paymentForm: FormGroup;
-  static find: any;
-  autoClick:boolean=true;
-  array:any = [];
-  userRecord: any = {
-  name: '',
-  email: '',
-  location: '',
-  service: '',
-  date: '',
-  category: '',
-  bank: '',
-  ifsc: '',
-  amount: '',
- };
   data: any;
   response: any;
   formGroup: any;
@@ -32,54 +17,12 @@ export class DisplayComponent implements OnInit {
   empRecord: any;
  constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
   this.saving( )
-
- 
-  this.paymentForm = this.fb.group({
-   name: [this.userRecord.name],
-   email: [this.userRecord.email],
-   location: [this.userRecord.location],
-   service: [this.userRecord.service],
-   date: [this.userRecord.date],
-   category: [this.userRecord.category],
-   bank: [this.userRecord.bank],
-   ifsc: [this.userRecord.ifsc],
-   amount: [this.userRecord.amount],
-
-  
-  });
  }
 
  ngOnInit(): void {
    console.log("payment component is working")
  }
- get name() {
-  return this.paymentForm.get('name')!;
- }
- get email() {
-  return this.paymentForm.get('email')!;
- }
- get service() {
-  return this.paymentForm.get('service')!;
- }
- get location() {
-  return this.paymentForm.get('location')!;
- }
- get date() {
-  return this.paymentForm.get('date')!;
- }
- get category() {
-  return this.paymentForm.get('category')!;
- }
- get bank() {
-  return this.paymentForm.get('bank')!;
- }
- get ifsc() {
-  return this.paymentForm.get('ifsc')!;
- }
- get amount() {
-  return this.paymentForm.get('amount')!;
- }
-
+ 
 saving( ) {
 
 let data = {

@@ -8,10 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./imgdash1.component.css']
 })
 export class Imgdash1Component implements OnInit {
-  imgForm: FormGroup;
-  userRecord: any = {
-    upload: '',
-  };
   data: any;
   formGroup: any;
   totalUseage: any;
@@ -20,19 +16,10 @@ export class Imgdash1Component implements OnInit {
   empRecord: any;
   constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
    this.saving()
-    this.imgForm = this.fb.group({
-      upload: [this.userRecord.upload],
-    });
   }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-
-  
-  get upload() {
-    return this.imgForm.get('upload')!;
-  }
-  
 
   saving() {
     

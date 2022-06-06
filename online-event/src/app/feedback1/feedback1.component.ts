@@ -9,12 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./feedback1.component.css']
 })
 export class Feedback1Component implements OnInit {
-  FeedForm: FormGroup;
-  userRecord: any = {
-    name1: '',
-    event: '',
-    comment: '',
-  };
+ 
   data: any;
   formGroup: any;
   totalUseage: any;
@@ -23,27 +18,14 @@ export class Feedback1Component implements OnInit {
   empRecord: any;
   constructor(private fb: FormBuilder, private api: Apiservice1Service, private router:Router) {
   this.saving( )
-    this.FeedForm = this.fb.group({
-      name1: [this.userRecord.name1],
-      event: [this.userRecord.event],
-      comment: [this.userRecord.comment],
-    });
+   
   }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
 
  
-  get name1() {
-    return this.FeedForm.get('name1')!;
-  }
-  get event() {
-    return this.FeedForm.get('event')!;
-  }
-  get comment() {
-    return this.FeedForm.get('comment')!;
-  }
-
+ 
   saving( ) {
     
     
