@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormBuilder} from '@angular/forms';
+import { FormBuilder} from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 @Component({
@@ -22,7 +22,7 @@ export class DisplayComponent implements OnInit {
  ngOnInit(): void {
    console.log("payment component is working")
  }
- 
+
 saving( ) {
 
 let data = {
