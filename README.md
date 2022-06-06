@@ -1,6 +1,5 @@
 Online Event Management System 
-# Title 
-
+# Title  
 
 # Description
 
@@ -10,7 +9,7 @@ who was incharge
 
 # General Information
 
-1.  online event is used for booking events easily from anywhere and anytime.
+1.  Online event is used for booking events easily from anywhere and anytime.
 2.  Create Your Captivating Virtual Event And An Innovative Experience For Visitors. Take a Quick Tour. 
 
 # Project structure
@@ -34,19 +33,19 @@ who was incharge
 
 1.  First you have to visit my home page and user will get know about to the use of online management.
 
-2.  about --> user can get an idea about event management system in about session
+2.  About --> user can get an idea about event management system in about session
 
-3.  My account --> visit my page and book your events easily.
+3.  My Account --> visit my page and book your events easily.
 
-4.  user register --> you can add your details to admin user if you want.
+4.  User Register --> you can add your details to admin user if you want.
 
 5.  event booking --> you can select among the packages as per user's requirements
 
-6.  contact as --> user can post their doupts in contact us session
+6.  Contact Us --> user can post their doupts in contact us session
 
-7.  gallery --> user can get an idea by seeing a catalog
+7.  Gallery --> user can get an idea by seeing a catalog
 
-8.  review --> users can view the previous customer reviews & experience
+8.  Review --> users can view the previous customer reviews & experience
 
 9.  Dashboard --> Admin only access the dashboard to add the events & packages .
 
