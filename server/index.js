@@ -1,18 +1,18 @@
-let express = require("express");
+const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dbconnection = require("./nano");
-let app = express();
+const app1 = express();
 const port = 8000;
 
-app.use(
+app1.use(
   cors({
     origin: "http://localhost:4200",
   })
 );
-app.use(bodyParser.json());
+app1.use(bodyParser.json());
 
-app.post("/postdata", function (req) {
+app1.post("/postdata", function (req) {
   var objectnew = {
     name: req.body.name,
     email: req.body.email,
@@ -26,7 +26,7 @@ app.post("/postdata", function (req) {
   });
 });
 
-app.post("/postdata1", function (req) {
+app1.post("/postdata1", function (req) {
   var objectnew1 = {
     name: req.body.name,
     email: req.body.email,
@@ -45,7 +45,7 @@ app.post("/postdata1", function (req) {
   });
 });
 
-app.post("/postdata2", function (req, res) {
+app1.post("/postdata2", function (req, res) {
   var objectnew2 = {
     userid: req.body.userid,
     password: req.body.password,
@@ -65,7 +65,7 @@ app.post("/postdata2", function (req, res) {
 });
 
 
-app.post("/postdata4", function (req) {
+app1.post("/postdata4", function (req) {
   var objectnew3 = {
     name: req.body.name,
     email: req.body.email,
@@ -77,9 +77,9 @@ app.post("/postdata4", function (req) {
   });
 });
 
-app.listen(port, (err) => {
+app1.listen(port, (err) => {
   if (err) {
-    return console.log("something bad happened", err);
+    return console.log("something bad happ1ened", err);
   }
 
   console.log(`server is listening on http://localhost:${port}`);
