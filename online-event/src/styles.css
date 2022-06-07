@@ -40,6 +40,10 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5rem;
 }
 
+.text-danger {
+    font-size: 16px;
+    font-weight: 700;
+}
 body{
 background: linear-gradient(90deg, rgba(233,233,236,1) 0%, rgb(13, 13, 14) 100%);
 }
