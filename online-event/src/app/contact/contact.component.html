@@ -5,12 +5,12 @@
     <form [formGroup]="contactForm" (ngSubmit)="saving(this.contactForm.value)">
         <div class="inputBox">
             <input type="text" placeholder="name" formControlName="name">
+            <input type="email" placeholder="email" formControlName="email">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="contactForm.controls['name'].touched && contactForm.hasError('required','name')">
                     *name is required</span>
             </div>
-            <input type="email" placeholder="email" formControlName="email">
             <div class="validator">
                     <span *ngIf="email?.invalid && email?.touched">
                         <div *ngIf="email.errors?.required" class="text-danger">
@@ -23,6 +23,7 @@
         </div>
         <div class="inputBox">
             <input type="tel" placeholder="mobile number" formControlName="mobile">
+            <input type="number" placeholder="adhar number" formControlName="adhar">
             <div class="validator">
                 <span *ngIf="mobile?.touched && mobile?.invalid" class=" text-danger">
                     <div *ngIf="mobile.errors?.required">Mobile Number is required.</div>
@@ -31,11 +32,6 @@
                     </div>
                 </span>
             </div>
-
-
-
-
-            <input type="number" placeholder="adhar number" formControlName="adhar">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="contactForm.controls['adhar'].touched && contactForm.hasError('required','adhar')">
