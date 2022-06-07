@@ -32,6 +32,11 @@ import { ImgdashComponent } from './imgdash/imgdash.component';
 import { Imgdash1Component } from './imgdash1/imgdash1.component';
 import { HttpCallInterceptor } from './interceptor';
 import { ToastrModule } from 'ngx-toastr';
+import { FunclupComponent } from './funclup/funclup.component';
+import { ConcersComponent } from './concers/concers.component';
+import { BirthdayComponent } from './birthday/birthday.component';
+import { PrewedsComponent } from './preweds/preweds.component';
+import { DanceComponent } from './dance/dance.component';
 
 const routes: Routes = [
   {path:'display',component:DisplayComponent},
@@ -49,6 +54,11 @@ const routes: Routes = [
   {path:'feedback',component:FeedbackComponent},
   {path:'feedback1',component:Feedback1Component},
   {path:'djparty',component:DjpartyComponent},
+  {path:'funclup',component:FunclupComponent},
+  {path:'concerns',component:ConcersComponent},
+  {path:'birthday',component:BirthdayComponent},
+  {path:'prewedding',component:PrewedsComponent},
+  {path:'dance',component:DanceComponent},
   {path:'admin',component:AdminComponent},
   {path:'cdash',component:ContactdashboardComponent},
   {path:'packdash',component:PackagedashComponent},
@@ -86,6 +96,11 @@ const routes: Routes = [
     Eventupdate1Component,
     ImgdashComponent,
     Imgdash1Component,
+    FunclupComponent,
+    ConcersComponent,
+    BirthdayComponent,
+    PrewedsComponent,
+    DanceComponent,
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,
