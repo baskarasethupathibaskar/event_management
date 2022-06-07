@@ -17,12 +17,12 @@ app.use(
 );
 app.use(bodyParser.json());
 
-app.post("/postdata", function (req) {
+app.post("/register", function (req) {
   const objectnew = {
     name: req.body.name,
     email: req.body.email,
     mobile: req.body.mobile,
-    adhar: req.body.adhar,
+    aadhaar: req.body.aadhaar,
     address: req.body.address,
   };
   console.log("data from angular", objectnew);
@@ -31,7 +31,7 @@ app.post("/postdata", function (req) {
   });
 });
 
-app.post("/postdata1", function (req) {
+app.post("/bookingevent", function (req) {
   const objectnew1 = {
     name: req.body.name,
     email: req.body.email,
@@ -39,10 +39,7 @@ app.post("/postdata1", function (req) {
     service: req.body.service,
     date: req.body.date,
     category: req.body.category,
-    bank: req.body.bank,
-    ifsc: req.body.ifsc,
     amount: req.body.amount,
-    
   };
   console.log("data from angular", objectnew1);
   dbconnection.pay.insert(objectnew1).then((data) => {
@@ -50,7 +47,7 @@ app.post("/postdata1", function (req) {
   });
 });
 
-app.post("/postdata2", function (req, res) {
+app.post("/adminlogin", function (req, res) {
   const objectnew2 = {
     userid: req.body.userid,
     password: req.body.password,
@@ -66,19 +63,6 @@ app.post("/postdata2", function (req, res) {
   dbconnection.login.find(fetchData).then((data) => {
     console.log("DharaniTest", data);
    res.send(data);
-  });
-});
-
-
-app.post("/postdata4", function (req) {
-  const objectnew3 = {
-    name: req.body.name,
-    email: req.body.email,
-    location: req.body.location,
-  };
-  console.log("data from angular", objectnew3);
-  dbconnection.feedback.insert(objectnew3).then((data) => {
-    console.log("data inserted successfully ", data);
   });
 });
 

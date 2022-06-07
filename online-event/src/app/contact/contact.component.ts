@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
     name: '',
     email: '',
     mobile: '',
-    adhar: '',
+    aadhaar: '',
     address: '',
   };
   data: any;
@@ -45,7 +45,7 @@ export class ContactComponent implements OnInit {
           Validators.maxLength(10),
         ],
       ],
-      adhar: [
+      aadhaar: [
         '',
         [
           Validators.required,
@@ -73,8 +73,8 @@ export class ContactComponent implements OnInit {
   get mobile() {
     return this.contactForm.get('mobile')!;
   }
-  get adhar() {
-    return this.contactForm.get('adhar')!;
+  get aadhaar() {
+    return this.contactForm.get('aadhaar')!;
   }
 
   saving(Formvalue: any) {
@@ -83,7 +83,7 @@ export class ContactComponent implements OnInit {
       name: Formvalue.name,
       email: Formvalue.email,
       mobile: Formvalue.mobile,
-      adhar: Formvalue.adhar,
+      aadhaar: Formvalue.aadhaar,
       address: Formvalue.address,
       type: 'event',
       createdBy: d,

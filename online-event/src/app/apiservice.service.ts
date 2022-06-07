@@ -9,16 +9,16 @@ export class APIserviceService {
 
   storeData(formData: any) {
     console.log("From api", formData);
-    return this.http.post<any>('http://localhost:8000/postdata/', formData)
+    return this.http.post<any>('http://localhost:8000/register/', formData)
   }
 
   storeData1(formData1: any) {
     console.log("From api", formData1);
-    return this.http.post<any>('http://localhost:8000/postdata1/', formData1)
+    return this.http.post<any>('http://localhost:8000/bookingevent/', formData1)
   }
 
   storeData2(formData2: any) {
     console.log("From api", formData2);
-    return this.http.post<any>('http://localhost:8000/postdata2/', formData2)
+    return this.http.post<any>('http://localhost:8000/adminlogin/', formData2)
   }
 }

@@ -23,7 +23,7 @@
         </div>
         <div class="inputBox">
             <input type="tel" placeholder="mobile number" formControlName="mobile">
-            <input type="number" placeholder="adhar number" formControlName="adhar">
+            <input type="number" placeholder="aadhaar number" formControlName="aadhaar">
             <div class="validator">
                 <span *ngIf="mobile?.touched && mobile?.invalid" class=" text-danger">
                     <div *ngIf="mobile.errors?.required">Mobile Number is required.</div>
@@ -34,8 +34,8 @@
             </div>
             <div class="validator">
                 <span class="text-danger"
-                    *ngIf="contactForm.controls['adhar'].touched && contactForm.hasError('required','adhar')">
-                    *adhar no is required</span>
+                    *ngIf="contactForm.controls['aadhaar'].touched && contactForm.hasError('required','aadhaar')">
+                    *aadhaar no is required</span>
             </div>
         </div>
         <textarea name="" placeholder="your address" id="" cols="30" rows="10" formControlName="address"></textarea>

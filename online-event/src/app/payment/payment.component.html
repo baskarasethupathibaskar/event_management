@@ -63,48 +63,6 @@
 
         <h1 class="heading1"> <span>Bank</span>Details</h1>
         <div class="inputBox">
-            <label>Select Your Bank</label>
-            <select name="bankname" class="inputBox" required formControlName="bank" aria-placeholder="select ">
-                <option selected="selected" value="0">--select your bankname --</option>
-                <option>ALLAHABAD BANK </option>
-                <option>ANDHRA BANK</option>
-                <option>AXIS BANK</option>
-                <option>STATE BANK OF INDIA</option>
-                <option>BANK OF BARODA</option>
-                <option>UCO BANK</option>
-                <option>UNION BANK OF INDIA</option>
-                <option>BANK OF INDIA</option>
-                <option>BANDHAN BANK LIMITED</option>
-                <option>CANARA BANK</option>
-                <option>GRAMIN VIKASH BANK</option>
-                <option>CORPORATION BANK</option>
-                <option>INDIAN BANK</option>
-                <option>INDIAN OVERSEAS BANK</option>
-                <option>ORIENTAL BANK OF COMMERCE</option>
-                <option>PUNJAB AND SIND BANK</option>
-                <option>PUNJAB NATIONAL BANK</option>
-                <option>RESERVE BANK OF INDIA</option>
-                <option>SOUTH INDIAN BANK</option>
-                <option>UNITED BANK OF INDIA</option>
-                <option>CENTRAL BANK OF INDIA</option>
-                <option>VIJAYA BANK</option>
-                <option>DENA BANK</option>
-                <option>BHARATIYA MAHILA BANK LIMITED</option>
-                <option>FEDERAL BANK LTD </option>
-                <option>HDFC BANK LTD</option>
-                <option>ICICI BANK LTD</option>
-                <option>IDBI BANK LTD</option>
-                <option>PAYTM BANK</option>
-                <option>FINO PAYMENT BANK</option>
-                <option>INDUSIND BANK LTD</option>
-                <option>KARNATAKA BANK LTD</option>
-                <option>KOTAK MAHINDRA BANK</option>
-                <option>YES BANK LTD</option>
-                <option>SYNDICATE BANK</option>
-                <option>BANK OF INDIA</option>
-                <option>BANK OF MAHARASHTRA</option>
-            </select>
-            <input type="text" placeholder="enter your IFSC" formControlName="ifsc">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="paymentForm.controls['ifsc'].touched && paymentForm.hasError('required','ifsc')">
