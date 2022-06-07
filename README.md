@@ -10,7 +10,7 @@ who was incharge
 1.  Online event is used for booking events easily from anywhere and anytime.
 2.  Create Your Captivating Virtual Event And An Innovative Experience For Visitors. Take a Quick Tour. 
 
-# Project Fow
+# Project FLow
 
     Login---> - Home
               - About
