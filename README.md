@@ -10,7 +10,7 @@ who was incharge
 1.  Online event is used for booking events easily from anywhere and anytime.
 2.  Create Your Captivating Virtual Event And An Innovative Experience For Visitors. Take a Quick Tour. 
 
-# Project structure
+# Project Fow
 
     Login---> - Home
               - About
@@ -37,7 +37,7 @@ who was incharge
 
 4.  User Register --> you can add your details to admin user if you want.
 
-5.  event booking --> you can select among the packages as per user's requirements
+5.  Event booking --> you can select among the packages as per user's requirements
 
 6.  Contact Us --> user can post their doupts in contact us session
 
