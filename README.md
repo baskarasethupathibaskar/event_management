@@ -1,5 +1,4 @@
-# Title  
-Online Event Management System 
+# Online Event Management System 
 # Description
 
 Online Event Management System :
