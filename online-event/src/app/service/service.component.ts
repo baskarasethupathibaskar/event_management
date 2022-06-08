@@ -16,7 +16,7 @@ export class ServiceComponent implements OnInit {
    this.saving()
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    console.log('service');
   }
  
   saving( ) {
@@ -43,7 +43,6 @@ export class ServiceComponent implements OnInit {
       for (const array in this.alluserData) {
         console.log(this.alluserData[array])
       }
-      this.empRecord.reset();
     });
     
     

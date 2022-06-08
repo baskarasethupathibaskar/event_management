@@ -41,7 +41,6 @@ export class Imgdash1Component implements OnInit {
       for (const array in this.alluserData) {
         console.log(this.alluserData[array])
       }
-      this.empRecord.reset();
     });
     
    

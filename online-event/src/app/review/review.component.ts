@@ -19,7 +19,7 @@ export class ReviewComponent {
    
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    console.log('review');
   }
 
  
@@ -49,7 +49,6 @@ export class ReviewComponent {
       for (const array in this.alluserData) {
         console.log(this.alluserData[array])
       }
-      this.empRecord.reset();
     });
     
     

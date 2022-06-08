@@ -29,7 +29,7 @@ export class PriceComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    console.log('price');
   }
 
   
@@ -62,7 +62,6 @@ export class PriceComponent implements OnInit {
       for (const array in this.alluserData) {
         console.log(this.alluserData[array])
       }
-      this.empRecord.reset();
     });
     
     }

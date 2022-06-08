@@ -17,7 +17,7 @@ export class GalleryComponent implements OnInit {
    this.saving()
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    console.log('gallery');
   }
 
   
@@ -46,7 +46,6 @@ export class GalleryComponent implements OnInit {
       for (const array in this.alluserData) {
         console.log(this.alluserData[array])
       }
-      this.empRecord.reset();
     });
     
     }

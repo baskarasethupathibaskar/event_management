@@ -42,7 +42,6 @@ this.api.get(data).subscribe(res => {
   for (const array in this.alluserData) {
     console.log(this.alluserData[array])
   }
-  this.empRecord.reset();
 });
 
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
-import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-contact',
@@ -32,7 +31,6 @@ export class ContactComponent implements OnInit {
     private toast: ToastrService,
     private fb: FormBuilder,
     private api: Apiservice1Service,
-    private router: Router
   ) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
@@ -57,7 +55,7 @@ export class ContactComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    console.log('contact');
   }
 
  

@@ -37,6 +37,7 @@ import { ConcersComponent } from './concers/concers.component';
 import { BirthdayComponent } from './birthday/birthday.component';
 import { PrewedsComponent } from './preweds/preweds.component';
 import { DanceComponent } from './dance/dance.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {path:'display',component:DisplayComponent},
@@ -104,7 +105,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,
-    AppRoutingModule,RouterModule.forRoot(routes),
+    BrowserAnimationsModule,AppRoutingModule,RouterModule.forRoot(routes),
     ToastrModule.forRoot(),
   ],
   providers: [
