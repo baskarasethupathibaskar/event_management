@@ -32,6 +32,7 @@ export class PaymentComponent implements OnInit {
   alluserData: any;
   alluser: any;
   empRecord: any;
+  minDate: any;
   constructor(
     private toast: ToastrService,
     private fb: FormBuilder,
@@ -53,7 +54,25 @@ export class PaymentComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('payment component is working');
+    this.setDate();
   }
+  setDate() {
+    let date = new Date();
+    let currentDate:any = date.getDate();
+    let currentMonth:any = date.getMonth()+1;
+    let currentYear:any = date.getFullYear();
+    if (currentDate < 10) {
+      currentDate = "0" + currentDate;
+    }
+    if (currentMonth < 10) {
+      currentMonth = "0" + currentMonth;
+    }
+    this.minDate = currentYear + "-" + currentMonth + "-" + currentDate;
+   
+    console.log(this.minDate)
+
+  }
+
   get name() {
     return this.paymentForm.get('name')!;
   }

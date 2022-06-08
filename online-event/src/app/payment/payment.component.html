@@ -20,7 +20,7 @@
                         a valid email address</div>
                 </span>
             </div>
-            <input type="date" placeholder="service date" formControlName="date">
+            <input type="date" placeholder="service date" formControlName="date" min={{minDate}}>
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="paymentForm.controls['date'].touched && paymentForm.hasError('required','date')">
