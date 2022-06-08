@@ -41,7 +41,6 @@ export class LoginformComponent implements OnInit {
       type: 'login',
     };
 
-    console.log('from form', Formvalue);
     console.log(login);
     this.api.storeData2(Formvalue).subscribe((data) => {
       if (data.docs.length > 0) {

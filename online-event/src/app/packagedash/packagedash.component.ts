@@ -63,7 +63,6 @@ export class PackagedashComponent implements OnInit {
       (_res) => {
         this.toast.success('package updated successfully');
         this.router.navigate(['packdash1']);
-        console.log('basco');
         this.packageForm.reset();
       },
       (_rej) => {

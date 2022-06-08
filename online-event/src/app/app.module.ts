@@ -12,7 +12,6 @@ import { PriceComponent } from './price/price.component';
 import { ReviewComponent } from './review/review.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-import { RouterModule, Routes } from '@angular/router';
 import { PaymentComponent } from './payment/payment.component';
 import { AnimationComponent } from './animation/animation.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -38,38 +37,6 @@ import { BirthdayComponent } from './birthday/birthday.component';
 import { PrewedsComponent } from './preweds/preweds.component';
 import { DanceComponent } from './dance/dance.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-const routes: Routes = [
-  {path:'display',component:DisplayComponent},
-  {path:'anim',component:AnimationComponent},
-  {path:'service',component:ServiceComponent},
-  {path:'pay',component:PaymentComponent},
-  {path:'home',component:HomeComponent},
-  {path:'about',component:AboutComponent},
-  {path:'gallery',component:GalleryComponent},
-  {path:'price',component:PriceComponent},
-  {path:'review',component:ReviewComponent},
-  {path:'contact',component:ContactComponent},
-  {path:'footer',component:FooterComponent},
-  {path:'login',component:LoginformComponent},
-  {path:'feedback',component:FeedbackComponent},
-  {path:'feedback1',component:Feedback1Component},
-  {path:'djparty',component:DjpartyComponent},
-  {path:'funclup',component:FunclupComponent},
-  {path:'concert',component:ConcersComponent},
-  {path:'birthday',component:BirthdayComponent},
-  {path:'prewedding',component:PrewedsComponent},
-  {path:'dance',component:DanceComponent},
-  {path:'admin',component:AdminComponent},
-  {path:'cdash',component:ContactdashboardComponent},
-  {path:'packdash',component:PackagedashComponent},
-  {path:'packdash1',component:Packagedash1Component},
-  {path:'eventupdate',component:EventupdateComponent},
-  {path:'eventupdate1',component:Eventupdate1Component},
-  {path:'imgupload',component:ImgdashComponent},
-  {path:'imgupload1',component:Imgdash1Component}
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -105,7 +72,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,FormsModule,ReactiveFormsModule,HttpClientModule,
-    BrowserAnimationsModule,AppRoutingModule,RouterModule.forRoot(routes),
+    BrowserAnimationsModule,AppRoutingModule,
     ToastrModule.forRoot(),
   ],
   providers: [
