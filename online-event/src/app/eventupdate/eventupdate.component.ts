@@ -62,6 +62,7 @@ export class EventupdateComponent implements OnInit {
       (_res) => {
         this.toast.success('event updated successfully');
         this.eForm.reset();
+        this.router.navigate(['eventupdate1']);
       },
       (_rej) => {
         this.toast.error('event failed to update');

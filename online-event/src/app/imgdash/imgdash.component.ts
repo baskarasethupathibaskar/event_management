@@ -50,6 +50,7 @@ export class ImgdashComponent implements OnInit {
       (_res) => {
         this.toast.success('image added sucessfully');
         this.imgForm.reset();
+        this.router.navigate(['imgupload1']);
       },
       (_rej) => {
         this.toast.error('image failed to add');

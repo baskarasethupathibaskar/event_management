@@ -63,6 +63,7 @@ export class FeedbackComponent implements OnInit {
       (_res) => {
         this.toast.success('thanks for your feedback');
         this.feedForm.reset();
+        this.router.navigate(['review']);
       },
       (_rej) => {
         this.toast.error('feedback failed to send');

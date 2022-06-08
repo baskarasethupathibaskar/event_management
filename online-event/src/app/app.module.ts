@@ -56,7 +56,7 @@ const routes: Routes = [
   {path:'feedback1',component:Feedback1Component},
   {path:'djparty',component:DjpartyComponent},
   {path:'funclup',component:FunclupComponent},
-  {path:'concerns',component:ConcersComponent},
+  {path:'concert',component:ConcersComponent},
   {path:'birthday',component:BirthdayComponent},
   {path:'prewedding',component:PrewedsComponent},
   {path:'dance',component:DanceComponent},
