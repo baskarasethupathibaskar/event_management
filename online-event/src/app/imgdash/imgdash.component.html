@@ -5,7 +5,7 @@
     <form [formGroup]="imgForm" (ngSubmit)="saving(this.imgForm.value)">
         <div class="inputBox">
             <label for="ADD Image"></label>
-            <input type="text" id="fileUpload" formControlName="upload" placeholder="upload image">
+            <input type="text" id="fileUpload" formControlName="upload" placeholder="Upload Image">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="imgForm.controls['upload'].touched && imgForm.hasError('required','upload')">

@@ -4,13 +4,13 @@
 
     <form [formGroup]="feedForm" (ngSubmit)="saving(this.feedForm.value)">
         <div class="inputBox">
-            <input type="text" placeholder="enter your name" formControlName="name1">
+            <input type="text" placeholder="Enter Your Name" formControlName="name1">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="feedForm.controls['name1'].touched && feedForm.hasError('required','name1')">
                     *event name is required</span>
             </div>
-            <input type="text" placeholder="event name" formControlName="event">
+            <input type="text" placeholder="Event Name" formControlName="event">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="feedForm.controls['event'].touched && feedForm.hasError('required','event')">
@@ -18,7 +18,7 @@
             </div>
         </div>
       
-        <textarea name="" placeholder="your comments" id="" cols="30" rows="10" formControlName="comment"></textarea>
+        <textarea name="" placeholder="Your Comments" id="" cols="30" rows="10" formControlName="comment"></textarea>
         <div class="validator">
             <span class="text-danger"
                 *ngIf="feedForm.controls['comment'].touched && feedForm.hasError('required','comment')">

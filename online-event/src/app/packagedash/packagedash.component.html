@@ -4,13 +4,13 @@
 
     <form [formGroup]="packageForm" (ngSubmit)="saving(this.packageForm.value)">
         <div class="inputBox">
-            <input type="text" placeholder="event name" formControlName="event1">
+            <input type="text" placeholder="Event Name" formControlName="event1">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="packageForm.controls['event1'].touched && packageForm.hasError('required','event1')">
                     *event is required</span>
             </div>
-            <input type="text" placeholder="amount" formControlName="amount1">
+            <input type="text" placeholder="Amount" formControlName="amount1">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="packageForm.controls['amount1'].touched && packageForm.hasError('required','amount1')">
@@ -18,7 +18,7 @@
             </div>
         </div>
        
-        <textarea name="" placeholder="service name" id="" cols="30" rows="10" formControlName="service1"></textarea>
+        <textarea name="" placeholder="Service Name" id="" cols="30" rows="10" formControlName="service1"></textarea>
         
         <input type="submit" value="ADD Package" class="btn">
     </form>

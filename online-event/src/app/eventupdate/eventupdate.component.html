@@ -4,13 +4,13 @@
 
     <form [formGroup]="eForm" (ngSubmit)="saving(this.eForm.value)">
         <div class="inputBox">
-            <input type="text" placeholder="event name" formControlName="ename">
+            <input type="text" placeholder="Event Name" formControlName="ename">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="eForm.controls['ename'].touched && eForm.hasError('required','ename')">
                     *event name is required</span>
             </div>
-            <input type="text" placeholder="event review" formControlName="ereview">
+            <input type="text" placeholder="Event Review" formControlName="ereview">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="eForm.controls['ereview'].touched && eForm.hasError('required','ereview')">
@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <textarea name="" placeholder="routes name" id="" cols="30" rows="10" formControlName="eamount"></textarea>
+        <textarea name="" placeholder="Routes Name" id="" cols="30" rows="10" formControlName="eamount"></textarea>
         <div class="validator">
             <span class="text-danger"
                 *ngIf="eForm.controls['eamount'].touched && eForm.hasError('required','eamount')">

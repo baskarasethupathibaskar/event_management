@@ -4,8 +4,8 @@
 
     <form [formGroup]="contactForm" (ngSubmit)="saving(this.contactForm.value)">
         <div class="inputBox">
-            <input type="text" placeholder="name" formControlName="name">
-            <input type="email" placeholder="email" formControlName="email">
+            <input type="text" placeholder="Name" formControlName="name">
+            <input type="email" placeholder="Email" formControlName="email">
             <div class="validator">
                 <span class="text-danger"
                     *ngIf="contactForm.controls['name'].touched && contactForm.hasError('required','name')">
@@ -22,8 +22,8 @@
             </div>
         </div>
         <div class="inputBox">
-            <input type="tel" placeholder="mobile number" formControlName="mobile">
-            <input type="number" placeholder="aadhaar number" formControlName="aadhaar">
+            <input type="tel" placeholder="Mobile Number" formControlName="mobile">
+            <input type="number" placeholder="Aadhaar Number" formControlName="aadhaar">
             <div class="validator">
                 <span *ngIf="mobile?.touched && mobile?.invalid" class=" text-danger">
                     <div *ngIf="mobile.errors?.required">Mobile Number is required.</div>
@@ -38,7 +38,7 @@
                     *aadhaar no is required</span>
             </div>
         </div>
-        <textarea name="" placeholder="your address" id="" cols="30" rows="10" formControlName="address"></textarea>
+        <textarea name="" placeholder="Your Address" id="" cols="30" rows="10" formControlName="address"></textarea>
         <div class="validator">
             <span class="text-danger"
                 *ngIf="contactForm.controls['address'].touched && contactForm.hasError('required','address')">
