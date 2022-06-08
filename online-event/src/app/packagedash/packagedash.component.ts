@@ -55,7 +55,7 @@ export class PackagedashComponent implements OnInit {
       service1: Formvalue.service1,
       amount1: Formvalue.amount1,
       type: 'package',
-      createdBy: d,
+      createdOnDateAndTime: d,
     };
 
     //angular to couch POST

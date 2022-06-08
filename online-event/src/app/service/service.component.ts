@@ -27,7 +27,7 @@ export class ServiceComponent implements OnInit {
       },
       "sort": [
          {
-            "createdBy": "desc"
+            "createdOnDateAndTime": "desc"
          }
       ]
     }

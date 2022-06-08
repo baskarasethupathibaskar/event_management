@@ -30,7 +30,7 @@ export class ContactdashboardComponent implements OnInit {
       },
       "sort": [
         {
-           "createdBy": "desc"
+           "createdOnDateAndTime": "desc"
         }
      ]
     }

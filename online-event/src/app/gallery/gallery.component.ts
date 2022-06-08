@@ -30,7 +30,7 @@ export class GalleryComponent implements OnInit {
       },
       "sort": [
          {
-            "createdBy": "desc"
+            "createdOnDateAndTime": "desc"
          }
       ]
     }

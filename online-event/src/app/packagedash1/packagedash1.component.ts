@@ -33,7 +33,7 @@ export class Packagedash1Component implements OnInit {
       },
       "sort": [
          {
-            "createdBy": "desc"
+            "createdOnDateAndTime": "desc"
          }
       ]
     }

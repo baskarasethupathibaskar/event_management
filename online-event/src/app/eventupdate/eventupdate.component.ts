@@ -54,7 +54,7 @@ export class EventupdateComponent implements OnInit {
       ereview: formValue.ereview,
       eamount: formValue.eamount,
       type: 'eventupdate',
-      createdBy: d,
+      createdOnDateAndTime: d,
     };
 
     //angular to couch POST

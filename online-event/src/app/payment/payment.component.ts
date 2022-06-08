@@ -95,7 +95,7 @@ export class PaymentComponent implements OnInit {
       amount: Formvalue.amount,
       ifsc: Formvalue.ifsc,
       type: 'pay',
-      createdBy: d,
+      createdOnDateAndTime: d,
     };
 
     //angular to couch POST

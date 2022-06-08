@@ -33,7 +33,7 @@ export class ReviewComponent {
       },
       "sort": [
          {
-            "createdBy": "desc"
+            "createdOnDateAndTime": "desc"
          }
       ]
     }

@@ -49,7 +49,12 @@ export class PriceComponent implements OnInit {
     let data = {
       selector: {
         type: "package"
-      }
+      },
+      "sort": [
+         {
+            "createdOnDateAndTime": "desc"
+         }
+      ]
     }
     
     

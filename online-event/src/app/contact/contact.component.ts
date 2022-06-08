@@ -84,7 +84,7 @@ export class ContactComponent implements OnInit {
       aadhaar: Formvalue.aadhaar,
       address: Formvalue.address,
       type: 'event',
-      createdBy: d,
+      createdOnDateAndTime: d,
     };
 
     //angular to couch POST

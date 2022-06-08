@@ -55,7 +55,7 @@ export class FeedbackComponent implements OnInit {
       event: Formvalue.event,
       comment: Formvalue.comment,
       type: 'feedback',
-      createdBy: d,
+      createdOnDateAndTime: d,
     };
 
     //angular to couch POST

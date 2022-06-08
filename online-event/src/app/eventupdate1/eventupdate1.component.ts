@@ -28,7 +28,7 @@ export class Eventupdate1Component implements OnInit {
       },
       "sort": [
          {
-            "createdBy": "desc"
+            "createdOnDateAndTime": "desc"
          }
       ]
     }

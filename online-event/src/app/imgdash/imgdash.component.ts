@@ -42,7 +42,7 @@ export class ImgdashComponent implements OnInit {
     const img = {
       upload: Formvalue.upload,
       type: 'imgupdate',
-      createdBy: d,
+      createdOnDateAndTime: d,
     };
 
     //angular to couch POST
