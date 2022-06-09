@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './packagedash1.component.html',
   styleUrls: ['./packagedash1.component.css']
 })
-export class Packagedash1Component implements OnInit {
+export class Packagedash1Component  {
 
   data: any;
   formGroup: any;
@@ -18,11 +18,6 @@ export class Packagedash1Component implements OnInit {
     this.saving( )
     
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
-  
   
 
   saving() {

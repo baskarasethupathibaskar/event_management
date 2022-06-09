@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Apiservice1Service } from '../apiservice1.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { Apiservice1Service } from '../apiservice1.service';
   templateUrl: './feedback1.component.html',
   styleUrls: ['./feedback1.component.css']
 })
-export class Feedback1Component implements OnInit {
+export class Feedback1Component {
  
   data: any;
   formGroup: any;
@@ -18,10 +18,6 @@ export class Feedback1Component implements OnInit {
   this.saving( )
    
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
  
  
   saving( ) {

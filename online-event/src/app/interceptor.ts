@@ -12,12 +12,20 @@ export class HttpCallInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     console.log('Intercepted request' + request.url);
     return next.handle(request).pipe(
-      tap(evt => {
-        console.log(evt)
-      }, err => {
-        console.log(err)
-        this.toastr.error(err.error.reason);
-      })
+         tap(
+          (evt) => {
+           console.log(evt);
+          },
+          (err: any) => {
+           if (err.error.reason) {
+            this.toastr.error(err.error.reason);
+           } else if (err.error.err.reason) {
+            this.toastr.error(err.error.err.reason);
+           } else {
+            this.toastr.error(err.error.message);
+           }
+          }
+         )
     )
   }
 

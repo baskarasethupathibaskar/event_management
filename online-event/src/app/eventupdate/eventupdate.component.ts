@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormGroup, FormBuilder,Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './eventupdate.component.html',
   styleUrls: ['./eventupdate.component.css'],
 })
-export class EventupdateComponent implements OnInit {
+export class EventupdateComponent {
   eForm: FormGroup;
   userRecord: any = {
     ename: '',
@@ -33,9 +33,7 @@ export class EventupdateComponent implements OnInit {
       eamount: ['', Validators.required],
     });
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  
 
   get ename() {
     return this.eForm.get('ename')!;

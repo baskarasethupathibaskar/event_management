@@ -63,6 +63,21 @@ app.post("/adminlogin", function (req, res) {
   dbconnection.login.find(fetchData).then((data) => {
     console.log("DharaniTest", data);
    res.send(data);
+   let data1;
+    if(data['id']){
+      data1 ={
+        message: 'Login Successfully',
+        status: "success",
+        response: data
+      }
+    }
+  res.send(data1);
+  }).catch((error)=>{
+  res.status(400).send({
+    message: 'failed to Login',
+    status: "error",
+    error: error
+ });
   });
 });
 

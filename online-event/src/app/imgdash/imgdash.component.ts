@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './imgdash.component.html',
   styleUrls: ['./imgdash.component.css'],
 })
-export class ImgdashComponent implements OnInit {
+export class ImgdashComponent {
   imgForm: FormGroup;
   userRecord: any = {
     upload: '',
@@ -29,10 +29,7 @@ export class ImgdashComponent implements OnInit {
       upload: ['', Validators.required],
     });
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
+  
   get upload() {
     return this.imgForm.get('upload')!;
   }

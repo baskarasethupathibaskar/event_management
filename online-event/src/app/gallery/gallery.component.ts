@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Apiservice1Service } from '../apiservice1.service';
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
-export class GalleryComponent implements OnInit {
+export class GalleryComponent {
 
   data: any;
   formGroup: any;
@@ -16,10 +16,7 @@ export class GalleryComponent implements OnInit {
   constructor(private api: Apiservice1Service) {
    this.saving()
   }
-  ngOnInit(): void {
-    console.log('gallery');
-  }
-
+  
   
 
   saving() {

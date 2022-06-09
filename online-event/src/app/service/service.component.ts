@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Apiservice1Service } from '../apiservice1.service';
 @Component({
   selector: 'app-service',
   templateUrl: './service.component.html',
   styleUrls: ['./service.component.css']
 })
-export class ServiceComponent implements OnInit {
+export class ServiceComponent {
   data: any;
   formGroup: any;
   totalUseage: any;
@@ -15,10 +15,7 @@ export class ServiceComponent implements OnInit {
   constructor(private api: Apiservice1Service) {
    this.saving()
   }
-  ngOnInit(): void {
-    console.log('service');
-  }
- 
+
   saving( ) {
     
     let data = {

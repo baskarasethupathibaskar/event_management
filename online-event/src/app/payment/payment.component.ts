@@ -53,7 +53,6 @@ export class PaymentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('payment component is working');
     this.setDate();
   }
   setDate() {

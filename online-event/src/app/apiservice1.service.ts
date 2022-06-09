@@ -45,7 +45,6 @@ export class Apiservice1Service {
     this.loginShow=!this.loginShow;
   
     this.show=!this.show;
-    console.log(this.show)
   }
 
 }

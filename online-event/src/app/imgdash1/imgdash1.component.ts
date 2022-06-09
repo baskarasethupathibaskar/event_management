@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Apiservice1Service } from '../apiservice1.service';
 @Component({
   selector: 'app-imgdash1',
   templateUrl: './imgdash1.component.html',
   styleUrls: ['./imgdash1.component.css']
 })
-export class Imgdash1Component implements OnInit {
+export class Imgdash1Component {
   data: any;
   formGroup: any;
   totalUseage: any;
@@ -15,10 +15,7 @@ export class Imgdash1Component implements OnInit {
   constructor(private api: Apiservice1Service) {
    this.saving()
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
+  
   saving() {
     
     let data = {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup,FormBuilder } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './price.component.html',
   styleUrls: ['./price.component.css']
 })
-export class PriceComponent implements OnInit {
+export class PriceComponent {
   packageForm: FormGroup;
   userRecord: any = {
     event1: '',
@@ -28,10 +28,6 @@ export class PriceComponent implements OnInit {
       service1: [this.userRecord.service1],
     });
   }
-  ngOnInit(): void {
-    console.log('price');
-  }
-
   
   get event1() {
     return this.packageForm.get('event1')!;

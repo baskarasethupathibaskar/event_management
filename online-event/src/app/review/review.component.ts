@@ -18,10 +18,6 @@ export class ReviewComponent {
   this.saving( )
    
   }
-  ngOnInit(): void {
-    console.log('review');
-  }
-
  
  
   saving( ) {

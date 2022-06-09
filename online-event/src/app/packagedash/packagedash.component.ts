@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './packagedash.component.html',
   styleUrls: ['./packagedash.component.css'],
 })
-export class PackagedashComponent implements OnInit {
+export class PackagedashComponent {
   packageForm: FormGroup;
   userRecord: any = {
     event1: '',
@@ -34,9 +34,7 @@ export class PackagedashComponent implements OnInit {
       service1: ['', Validators.required],
     });
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  
 
   get event1() {
     return this.packageForm.get('event1')!;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './feedback.component.html',
   styleUrls: ['./feedback.component.css'],
 })
-export class FeedbackComponent implements OnInit {
+export class FeedbackComponent {
   feedForm: FormGroup;
   userRecord: any = {
     name1: '',
@@ -34,9 +34,7 @@ export class FeedbackComponent implements OnInit {
       comment: ['', Validators.required],
     });
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  
 
   get name1() {
     return this.feedForm.get('name1')!;

@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Apiservice1Service } from '../apiservice1.service';
 @Component({
   selector: 'app-eventupdate1',
   templateUrl: './eventupdate1.component.html',
   styleUrls: ['./eventupdate1.component.css']
 })
-export class Eventupdate1Component implements OnInit {
+export class Eventupdate1Component {
   data: any;
   formGroup: any;
   totalUseage: any;
@@ -15,10 +15,6 @@ export class Eventupdate1Component implements OnInit {
   constructor(private api: Apiservice1Service) {
    this.saving()
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
   
   saving( ) {
     

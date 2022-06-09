@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Apiservice1Service } from '../apiservice1.service';
 import { ToastrService } from 'ngx-toastr';
@@ -7,7 +7,7 @@ import { ToastrService } from 'ngx-toastr';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
   contactForm: FormGroup;
   AppService: any;
   static find: any;
@@ -53,9 +53,6 @@ export class ContactComponent implements OnInit {
       ],
       address: ['', Validators.required],
     });
-  }
-  ngOnInit(): void {
-    console.log('contact');
   }
 
  

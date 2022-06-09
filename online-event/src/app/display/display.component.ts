@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { Apiservice1Service } from '../apiservice1.service';
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.css']
 })
-export class DisplayComponent implements OnInit {
+export class DisplayComponent {
   data: any;
   response: any;
   formGroup: any;
@@ -15,10 +15,6 @@ export class DisplayComponent implements OnInit {
   empRecord: any;
  constructor(private api: Apiservice1Service) {
   this.saving( )
- }
-
- ngOnInit(): void {
-   console.log("payment component is working")
  }
 
 saving( ) {
